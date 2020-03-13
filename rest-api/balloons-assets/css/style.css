@@ -1,5 +1,38 @@
+
+
 #balloons {
     background-color: #eee;
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+}
+#area{
+    display: flex;
+    justify-content: center;
+}
+#area-button{
+    background-color: #eee;
+    display: block;
+    margin: 0 auto 0 10px;
+}
+#reset{
+    border-radius: 5px ;
+    border-style: solid ; 
+    color: #fff;
+    text-decoration: none;
+    user-select: none; 
+    background: rgb(248, 224, 12); 
+    padding: .7em 1.5em; 
+    outline: none; 
+    margin:  5px 5px 0 5px;
+    width: 70px;
+    height: 50px;
+}
+#reset:hover { 
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    background: rgb(221, 243, 26); 
+}
+#reset:active { 
+    background: rgb(207, 221, 10); 
 }
