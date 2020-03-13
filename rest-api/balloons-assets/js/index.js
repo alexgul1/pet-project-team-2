@@ -1,8 +1,8 @@
 let canvas = document.getElementById('balloons');
 let ctx = canvas.getContext('2d');
 let balloons = [];
-let ballRadius = 10;
-let speed = 16;
+let ballRadius = 20;
+let speed = 1;
 
 function drawBall(obj) {
     ctx.save();
@@ -74,7 +74,11 @@ function randomSign() {
 }
 
 canvas.addEventListener('click',() => {
-    drawBall(createBall())
+    if((event.offsetX>ballRadius)&&(event.offsetX<canvas.width- ballRadius)
+        &&(event.offsetY>ballRadius)&&(event.offsetY<canvas.height- ballRadius)&&
+        checkIsThereNoOneBall(event.offsetX,event.offsetY)){
+        drawBall(createBall())
+        }
 });
 
 setInterval(function () {
@@ -89,5 +93,16 @@ let reset = document.getElementById('reset'); //add event Listener
 reset.addEventListener('click', resets);
 
 function resets () {
-    balloons = [];
+    balloons.length=0;
+}
+
+function checkIsThereNoOneBall(x,y){
+    let trueOrFalse=true
+    for(let obj in balloons){
+        if(Math.sqrt((Math.abs(x-balloons[obj].x)**2)+(Math.abs(y-balloons[obj].y)**2))<=ballRadius*2){
+            trueOrFalse=false
+            break
+        }  
+    }
+    return trueOrFalse
 }
