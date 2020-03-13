@@ -65,3 +65,13 @@ setInterval(function () {
     }
 },50)
 }
+
+let reset = document.getElementById('reset'); //add event Listener
+reset.addEventListener('click', resets);
+
+function resets () {
+    canvas = document.getElementById('balloons');
+    ctx = canvas.getContext('2d');
+    balloons = [];
+    ballRadius = 10;
+}
