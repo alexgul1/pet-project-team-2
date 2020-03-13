@@ -40,6 +40,8 @@ function collide(index) {
                     ball.dx *= -1;
                     balloons[i].dx *= -1;
                 }
+                ball.rgb = randomColor();
+                balloons[i].rgb = randomColor();
             }
         }
     }
