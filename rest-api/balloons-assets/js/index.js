@@ -2,6 +2,7 @@ let canvas = document.getElementById('balloons');
 let ctx = canvas.getContext('2d');
 let balloons = [];
 let ballRadius = 10;
+let speed = 16;
 
 function drawBall(obj) {
     ctx.save();
@@ -30,11 +31,11 @@ function createBall() {
     let ball = {
         x: event.offsetX,
         y: event.offsetY,
-        dx: Math.ceil(Math.random() * 100) / 4 * randomSign(), // or (/100 * 25)
+        dx: Math.ceil(Math.random() * 100) / 100 * speed * randomSign(), // or (/100 * 25)
         //dy: (25 - Math.abs(this.dx)) * randomSign(), имхо так не работает???
         rgb: randomColor(),
     };
-    ball.dy = (25 - Math.abs(ball.dx)) * randomSign();
+    ball.dy = (speed - Math.abs(ball.dx)) * randomSign();
     balloons.push(ball);
     return ball;
 }
