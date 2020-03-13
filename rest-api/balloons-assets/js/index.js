@@ -26,6 +26,25 @@ function draw(ball) {
     ball.y += ball.dy;
 }
 
+function collide(index) {
+    let ball = balloons[index];
+    for(let i = 0; i < balloons.length; i++){
+        if(i !== index){
+            let dist = Math.sqrt(Math.pow(balloons[i].x - ball.x, 2) + Math.pow(balloons[i].y - ball.y,2));
+            if(dist <= ballRadius*2){
+                if(ball.y < balloons[i].y){
+                    ball.dy *= -1;
+                    balloons[i].dy *= -1;
+                }
+                if(ball.x < balloons[i].x){
+                    ball.dx *= -1;
+                    balloons[i].dx *= -1;
+                }
+            }
+        }
+    }
+}
+
 function createBall() {
     //speed - 25
     let ball = {
@@ -56,23 +75,19 @@ function randomSign() {
 
 canvas.addEventListener('click',() => {
     drawBall(createBall())
-
 });
-if(balloons !== []){
+
 setInterval(function () {
     ctx.clearRect(0,0, canvas.width, canvas.height);
     for(let i = 0; i < balloons.length; i++){
-        draw(balloons[i])
+        collide(i);
+        draw(balloons[i]);
     }
-},50)
-}
+},16);
 
 let reset = document.getElementById('reset'); //add event Listener
 reset.addEventListener('click', resets);
 
 function resets () {
-    canvas = document.getElementById('balloons');
-    ctx = canvas.getContext('2d');
     balloons = [];
-    ballRadius = 10;
 }
