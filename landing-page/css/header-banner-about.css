@@ -1,0 +1,110 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#home{
+    height: 100vh;
+    background:url("../images/portfolio-single-bckground.png");
+    background-size: 100% 100%;
+    transform: translateY(0px) translateZ(0px);
+}
+header{
+    display:flex;
+}
+#headline{
+    font-size: 85%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    width: 50%;
+    margin-top: 2.5%;
+    margin-right: 6%;
+}
+#logo{
+    width: 40%;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+.headline-elem{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.1s ease;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 15px ;
+}
+.headline-elem:hover{
+    cursor: pointer;
+    color: #10c9c3;
+    transition: all 0.1s ease;
+}
+.main-info-table{
+    width: 100%;
+    padding: 130px 0;
+    display: flex;
+    justify-content:flex-end;
+}
+.container {
+    justify-content:right;
+    display: block;
+    width: 43%;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: Lucida Sans Unicode;
+}
+.main-info-table-text{
+    font-size: 18px;
+    color: #767676;
+}
+.main-info-table-btn{
+    padding: 40px 0;
+}
+a{
+    background-color: #767676;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 17px 40px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+}
+a:hover{
+    cursor: pointer;
+    background-color: #10c9c3;
+    transition: all 0.2s ease;
+}
+.about-info-table{
+    padding: 50px 100px;
+    justify-content: center;
+    display: flex
+}
+.about-container{
+    justify-content:center;
+    display: block;
+    width: 60%;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: Lucida Sans Unicode;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.about-info-table-text{
+    text-align: center;
+    color: #767676;
+}
+.about-info-table-sign img{
+    display: block;
+    margin: 20px auto auto;
+}
+    
+
+
+
+
