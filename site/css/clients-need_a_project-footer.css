@@ -1,0 +1,170 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+a {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #bcbcbc;
+    text-decoration: none;
+}
+.piroldesign {
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+li {
+    list-style-type: none;
+}
+.footer {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background-color: #141414;
+    color: #bcbcbc;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 1;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.column1 {
+    
+    display: block;
+    padding: 30px 15px 0px;
+}
+h3 {
+    margin: 0px 0px 20px;
+}
+.column2 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+.column3 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+.column4 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+.main {
+    background-color: #bcbcbc;
+}
+ul {
+    display: block;
+    margin: 0px;
+}
+.llist {
+    display: flex;
+}
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.image{
+    margin-left: auto;
+    margin-right: auto;
+}
+.project {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 25px 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button {
+    margin: 25px auto 0 auto;
+    display: block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 180px;
+    height: 55px;
+    background-color: #10c9c3;
+    border: none;
+    font-size: 15px;
+    color: white;
+}
+.button:hover {
+    background-color: rgb(10, 47, 56);
+}
+.contact1 {
+    display: flex;
+    width: 100%;
+    padding: 0px 15px 0px
+}
+.form-control-1-1{
+    margin: 15px 8px 15px auto ;
+    width: 20%;
+    height: 40px;
+}
+.form-control-1-2{
+    margin: 15px auto 15px 8px ;
+    width: 20%;
+    height: 40px;
+}
+.contact2{
+    display: flex;
+    width: 100%;
+    padding: 0px 15px 0px;
+}
+.form-control-2 {
+    margin: 15px auto;
+    width: 41.5%;
+    height: 40px;
+}
+.contact3{
+    display: flex;
+    width: 100%;
+    padding: 0px 15px 0px;
+}
+.form-control-3 {
+    margin: 15px auto;
+    width: 41.5%;
+    height: 180px;
+}
+img {
+    width: 200px;
+    height: 150px;
+}
+.logo {
+    display: flex;
+    width: 150px;
+    padding: 0px 15px 0px;
+}
+
+@media (max-width: 768px) {
+    .contact1{
+        flex-direction: column;
+    align-items: center;        
+    }
+    .form-control-1-1{
+        margin: 10px 0;
+        width: 60%;
+    }
+    .form-control-1-2{
+        margin: 10px 0;
+        width: 60%;
+    }
+    .form-control-2 {
+        width: 60%;
+    }
+    .form-control-3 {
+        width: 60%;
+    }
+    .container{
+        flex-direction: column;
+        
+    }
+    .logos{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .logo{
+        width: 150px;
+    }
+}
