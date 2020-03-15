@@ -33,7 +33,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,.5);
+    background: url("../images/work/look.svg") no-repeat center ;
     opacity: 0;
 }
 
@@ -44,7 +44,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../images/work/look.svg") no-repeat center ;
+    background: rgba(0,0,0,.5);
     justify-content: center;
     opacity: 0;
 }
@@ -149,8 +149,6 @@ body {
 }
 
 
-
-
 @media (min-width: 1200px) {
 
 }
@@ -222,7 +220,6 @@ body {
 }
 
 @media (max-width: 639px) {
-
     .container-numbers {
         padding-left: 0;
 
@@ -239,6 +236,7 @@ body {
     }
     .skills-progress {
         padding-top: 35px;
+        padding-left: 20px;
     }
     .col-sm-12 {
         -ms-flex: 0 0 100% !important;
