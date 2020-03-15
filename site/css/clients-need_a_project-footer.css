@@ -140,7 +140,7 @@ img {
 @media (max-width: 768px) {
     .contact1{
         flex-direction: column;
-    align-items: center;        
+        align-items: center;        
     }
     .form-control-1-1{
         margin: 10px 0;
@@ -158,7 +158,11 @@ img {
     }
     .container{
         flex-direction: column;
-        
+        justify-content: left;
+        align-items: flex-start;   
+    }
+    ul {
+        padding: 0px;
     }
     .logos{
         flex-wrap: wrap;
