@@ -717,7 +717,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 
 }
 
@@ -801,7 +801,7 @@ body {
 }
 .logo {
     display: flex;
-    width: 150px;
+    width: 20%;
     padding: 0px 15px 0px;
 }
 
