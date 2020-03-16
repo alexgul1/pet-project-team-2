@@ -1,0 +1,390 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+.span-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.span-nunitosans {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.home-text {
+    padding: 100px;
+    width: 100%;
+    height: 300px;
+    background-color: #f6f6f6;
+
+}
+.home-text__about {
+    text-align: center;
+    vertical-align: center;
+}
+.heading {
+    font-size: 38px;
+}
+
+.home-text__text {
+    font-size: 18px;
+}
+
+.gallery{
+    justify-content: center;
+    margin: 0;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    display: block;
+    width: 25%;
+    height: 300px;
+    position: relative;
+}
+
+.gallery-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/work/look.svg") no-repeat center ;
+    opacity: 0;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(33,191,185,.5);
+    opacity: 0;
+}
+
+.gallery-item:hover::before,
+.gallery-item:hover::after { opacity: 1; }
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:nth-child(2n + 1){
+    background-color: #838383;
+}
+
+.gallery-item:nth-child(2n){
+    background-color: #dddddd;
+}
+
+.container-footer a {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #bcbcbc;
+    text-decoration: none;
+}
+
+.piroldesign {
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-footer li {
+    list-style-type: none;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background-color: #141414;
+    color: #bcbcbc;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 1;
+}
+
+.column1 {
+
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.container-footer h3 {
+    margin: 0px 0px 20px;
+}
+
+.column2 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.column3 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.column4 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.container-footer ul {
+    display: block;
+    margin: 0px;
+}
+
+.llist {
+    display: flex;
+}
+.container-footer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px){
+    .gallery-item {
+        display: block;
+        width: 33.33%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 979px){
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        display: block;
+        width: 50%;
+        height: 250px;
+    }
+    .home-text {
+        padding: 50px;
+        height: auto;
+    }
+    .container-footer{
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        width: 50%;
+        margin: auto;
+    }
+    .container-footer ul {
+        padding: 0;
+    }
+}
+
+@media (max-width: 639px) {
+
+}
+
+@media (max-width: 479px) {
+    .gallery-item {
+        display: block;
+        width: 100%;
+        height: 250px;
+    }
+}
+
+.header{
+    display:flex;
+    padding-bottom: 20px;
+}
+.logo{
+    width: 40%;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+.menu-button{
+    width: 60%;
+    margin-right: 8%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: right;
+}
+.menu-content{
+    display: block;
+}
+.menu-button-logo{
+    position: relative;
+}
+.headline{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+
+    margin-top: 2.5%;
+    margin-right: 6%;
+}
+.headline-elem{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.1s ease;
+    padding-right: 20px;
+}
+
+.headline-elem .active {
+    color: #007bff
+}
+.headline-elem-href{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.headline-elem-href:hover{
+    color: #10c9c3;
+    transition: all 0.1s ease;
+}
+@media (min-width: 1281px) {
+    .menu-button{
+        display: none;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .menu-button{
+        display: none;
+    }
+    .main-info-table{
+        padding-top: 70px;
+    }
+}
+@media (min-width: 828px) and (max-width: 1024px) {
+    .menu-button{
+        display: none;
+    }
+    .main-info-table{
+        padding-top: 30px;
+    }
+    .logo{
+        margin-left: 4%;
+        margin-top: 3%;
+        width: 35%;
+    }
+    .logotype{
+        width: 40px;
+    }
+    .headline{
+        margin-right: 4%;
+        width: 70%;
+    }
+}
+@media (min-width: 601px) and (max-width: 827px) {
+    .main-info-table{
+        padding-top: 50px;
+    }
+    .logo{
+        margin-left: 4%;
+        margin-top: 3%;
+        width: 50%;
+    }
+    .logotype{
+        margin-top: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    .log-menu{
+        width: 50px;
+    }
+    .menu-button{
+        margin-right: 4%;
+        margin-top: 3%;
+        display: grid;
+    }
+    .menu-content{
+        display: flex;
+    }
+    .btn-contact-us:hover .nav-menu{
+        cursor: pointer;
+        display: flex;
+    }
+    .headline{
+        display: none;
+    }
+    .container{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    h1{
+        font-size: 45px;
+    }
+    .main-info-table-text{
+        font-size:22px ;
+        color: #000000;
+    }
+    .btn-contact-us{
+        background-color: #000000;
+        font-size: 16px;
+    }
+}
+@media (min-width: 320px) and (max-width: 600px){
+    .main-info-table{
+        padding-top: 50px;
+    }
+    .logo{
+        margin-left: 4%;
+        margin-top: 3%;
+        width: 50%;
+    }
+
+    .logotype{
+        margin-left: 5px;
+        margin-top: 5px;
+        width: 35px;
+    }
+    .menu-button{
+        margin-left: 4%;
+        margin-top: 3%;
+        display: grid;
+    }
+    .headline{
+        display: none;
+    }
+    .container{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .main-info-table-text{
+        font-size:18px ;
+        color: #000000;
+    }
+    .btn-contact-us{
+        background-color: #000000;
+        font-size: 13px;
+    }
+    #about{
+        justify-content: center;
+    }
+    .about-info-table{
+        width: auto;
+        padding: 30px 60px;
+    }
+    .about-container{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
