@@ -1,7 +1,12 @@
-body{
+*{
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+}
+
+
+#area {
+    width: 100%;
+    background-color: #141414;
 }
 a {
     color: #ffffff;
@@ -18,6 +23,7 @@ li {
     list-style-type: none;
 }
 .footer {
+    width: 100%;
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
@@ -55,6 +61,8 @@ h3 {
 }
 .main {
     background-color: #bcbcbc;
+    width: 100%;
+
 }
 ul {
     display: block;
@@ -63,19 +71,36 @@ ul {
 .llist {
     display: flex;
 }
+
+.container-logos {
+    width: 100%;
+    background-color: #bcbcbc;
+}
+
 .logos {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
+
+.logo {
+    width: 25%;
+    padding: 0;
+}
+
 .image{
     margin-left: auto;
     margin-right: auto;
 }
+
 .project {
+    align-items: center;
     text-align: center;
+    width: 100%;
     background-color: #f5f5f5;
-    padding: 25px 0px;
+    padding: 25px 0px 25px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .button {
@@ -92,39 +117,45 @@ ul {
 .button:hover {
     background-color: rgb(10, 47, 56);
 }
+.contact {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .contact1 {
     display: flex;
     width: 100%;
-    padding: 0px 15px 0px
+    text-align: center;
 }
 .form-control-1-1{
-    margin: 15px 8px 15px auto ;
-    width: 20%;
+    width: 50%;
+    margin-right: 20px;
     height: 40px;
 }
 .form-control-1-2{
-    margin: 15px auto 15px 8px ;
-    width: 20%;
+    width: 50%;
     height: 40px;
 }
 .contact2{
     display: flex;
     width: 100%;
-    padding: 0px 15px 0px;
+    padding: 0px 0 0px 0px;
 }
 .form-control-2 {
-    margin: 15px auto;
-    width: 41.5%;
+    margin: 15px 0;
+    width: 100%;
     height: 40px;
 }
 .contact3{
     display: flex;
     width: 100%;
-    padding: 0px 15px 0px;
+    padding: 0px 0 0px 0px;
 }
 .form-control-3 {
-    margin: 15px auto;
-    width: 41.5%;
+    margin: 15px 0;
+    width: 100%;
     height: 180px;
 }
 img {
@@ -137,24 +168,33 @@ img {
     padding: 0px 15px 0px;
 }
 
+@media (max-width: 979px) {
+    .logo{
+        width: 25%;
+    }
+}
+
 @media (max-width: 768px) {
+    .contact {
+        width: 80%;
+    }
     .contact1{
         flex-direction: column;
         align-items: center;        
     }
     .form-control-1-1{
         margin: 10px 0;
-        width: 60%;
+        width: 100%;
     }
     .form-control-1-2{
         margin: 10px 0;
-        width: 60%;
+        width: 100%;
     }
     .form-control-2 {
-        width: 60%;
+        width: 100%;
     }
     .form-control-3 {
-        width: 60%;
+        width: 100%;
     }
     .container{
         flex-direction: column;
@@ -168,7 +208,13 @@ img {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .logo{
-        width: 150px;
+
+}
+
+@media (max-width: 639px){
+    .logo {
+        width: 50%;
+
     }
+
 }
