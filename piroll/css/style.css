@@ -722,7 +722,7 @@ body {
 }
 
 .logo {
-    width: 25%;
+    width: 20%;
     padding: 0;
 }
 
@@ -788,7 +788,6 @@ body {
 .contact3{
     display: flex;
     width: 100%;
-    padding: 0px 0 0px 0px;
 }
 .form-control-3 {
     margin: 15px 0;
@@ -796,13 +795,11 @@ body {
     height: 180px;
 }
 .container-logos img {
-    width: 200px;
-    height: 150px;
 }
 .logo {
     display: flex;
+    justify-content: space-around;
     width: 20%;
-    padding: 0px 15px 0px;
 }
 
 @media (max-width: 979px) {
@@ -861,3 +858,276 @@ body {
         justify-content: center;
     }
 }
+
+.home{
+    height: 100vh;
+    background:url("../images/portfolio-single-bckground.png") no-repeat center;
+    background-size: cover;
+
+}
+.head-header{
+    display:flex;
+}
+.logo{
+    width: 40%;
+    margin-left: 8%;
+    margin-top: 2%;
+}
+.menu-button{
+    width: 60%;
+    margin-right: 8%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: right;
+}
+.menu-content{
+    display: block;
+}
+.menu-button-logo{
+    position: relative;
+}
+.headline{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 2.5%;
+    margin-right: 6%;
+}
+.headline-elem{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.1s ease;
+}
+.headline-elem-href{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.headline-elem-href:hover{
+    color: #10c9c3;
+    transition: all 0.1s ease;
+}
+.main-info-table-title{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 15px ;
+}
+.main-info-table{
+    padding: 150px 0;
+    display: flex;
+    justify-content:flex-end;
+}
+.main-container {
+    display: block;
+    width: 43%;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: Lucida Sans Unicode;
+}
+.main-info-table-text{
+    font-size: 18px;
+    color: #767676;
+}
+.main-info-table-btn{
+    padding: 40px 0;
+}
+.btn-contact-us{
+    background-color: #767676;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 17px 40px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+}
+.btn-contact-us:hover{
+    background-color: #10c9c3;
+    transition: all 0.2s ease;
+}
+.about-info-table{
+    padding: 50px 100px;
+    justify-content: center;
+    display: flex
+}
+.about-container{
+    justify-content:center;
+    display: block;
+    width: 60%;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-family: Lucida Sans Unicode;
+}
+.about-info-table-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.about-info-table-text{
+    text-align: center;
+    color: #767676;
+}
+.about-info-table-sign img{
+    display: block;
+    margin: 20px auto auto;
+}
+.nav-menu{
+    position: relative;
+    width: auto;
+    height: 500px;
+    justify-content: space-around;
+    background-color: black;
+    display: none;
+}
+.logotype:hover{
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+.log-menu:hover{
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+@media (min-width: 1281px) {
+    .menu-button{
+        display: none;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .menu-button{
+        display: none;
+    }
+}
+@media (min-width: 828px) and (max-width: 1024px) {
+    .menu-button{
+        display: none;
+    }
+    .main-info-table{
+        padding-top: 130px;
+    }
+    .logo{
+        margin-left: 4%;
+        margin-top: 3%;
+        width: 35%;
+    }
+    .logotype{
+        width: 40px;
+    }
+    .headline{
+        margin-right: 4%;
+        width: 70%;
+    }
+}
+@media (min-width: 601px) and (max-width: 827px) {
+    .main-info-table{
+        padding-top: 120px;
+    }
+    .logo{
+        margin-left: 4%;
+        margin-top: 3%;
+        width: 50%;
+    }
+    .logotype{
+        margin-top: 5px;
+        width: 40px;
+        height: 40px;
+    }
+    .log-menu{
+        width: 50px;
+    }
+    .menu-button{
+        margin-right: 4%;
+        margin-top: 3%;
+        display: grid;
+    }
+    .menu-content{
+        display: flex;
+    }
+    .btn-contact-us:hover .nav-menu{
+        cursor: pointer;
+        display: flex;
+    }
+    .headline{
+        display: none;
+    }
+    .main-container{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .main-info-table-title{
+        font-size: 45px;
+    }
+    .main-info-table-text{
+        font-size:22px ;
+        color: #000000;
+    }
+    .btn-contact-us{
+        background-color: #000000;
+        font-size: 16px;
+    }
+}
+@media (min-width: 320px) and (max-width: 600px){
+    .main-info-table{
+        padding-top: 100px;
+    }
+    .logo{
+        margin-left: 4%;
+        margin-top: 3%;
+        width: 50%;
+    }
+
+    .logotype{
+        margin-left: 5px;
+        margin-top: 5px;
+        width: 35px;
+    }
+    .menu-button{
+        margin-left: 4%;
+        margin-top: 3%;
+        display: grid;
+    }
+    .headline{
+        display: none;
+    }
+    .main-container{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .main-info-table-title{
+        font-size: 38px;
+    }
+    .main-info-table-text{
+        font-size:25px ;
+        color: #000000;
+    }
+    .btn-contact-us{
+        background-color: #000000;
+        font-size: 18px;
+    }
+    .about{
+        justify-content: center;
+    }
+    .about-info-table{
+        width: auto;
+        padding: 30px 60px;
+    }
+    .about-container{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .about-info-table-title{
+        font-size: 34px ;
+    }
+    .about-info-table-text{
+        font-size:20px ;
+    }
+}
+
+
+
+
+
