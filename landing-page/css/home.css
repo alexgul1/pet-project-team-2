@@ -116,7 +116,7 @@ body {
     z-index: 1;
 }
 
-column1 {
+.column1 {
 
     display: block;
     padding: 30px 15px 0px;
