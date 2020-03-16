@@ -136,6 +136,75 @@ body {
     }
 }
 
+.container-footer a {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #bcbcbc;
+    text-decoration: none;
+}
+
+.piroldesign {
+    color: white;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-footer li {
+    list-style-type: none;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    background-color: #141414;
+    color: #bcbcbc;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 1;
+}
+
+column1 {
+
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.container-footer h3 {
+    margin: 0px 0px 20px;
+}
+
+.column2 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.column3 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.column4 {
+    display: block;
+    padding: 30px 15px 0px;
+}
+
+.container-footer ul {
+    display: block;
+    margin: 0px;
+}
+
+.llist {
+    display: flex;
+}
+.container-footer {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
 @media (max-width: 768px) {
     .col-sm-12 {
         -ms-flex: 0 0 50% !important;
@@ -156,6 +225,16 @@ body {
     .about-me-description {
         height: 60%;
         padding-left: 20px;
+    }
+    .container-footer{
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-start;
+        width: 50%;
+        margin: auto;
+    }
+    .container-footer ul {
+        padding: 0;
     }
 }
 
