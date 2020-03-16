@@ -75,6 +75,7 @@ ul {
 .container-logos {
     width: 100%;
     background-color: #bcbcbc;
+
 }
 
 .logos {
@@ -122,6 +123,7 @@ ul {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding-top: 20px;
 }
 
 .contact1 {
