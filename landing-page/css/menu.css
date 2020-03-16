@@ -1,0 +1,54 @@
+body{
+    height: 500px ;
+    background-color: #252525;
+}
+.logo-content{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: block;
+    margin: 30px 50px;
+}
+.log-close{
+    height:  80px;
+    transition: all 0.1s ease;
+}
+.log-close:hover{
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+.logotype{
+    margin-top: 15px;
+    margin-left: 15px;
+    height:50px ;
+    width: 50px;
+    transition: all 0.1s ease;
+}
+.logotype:hover{
+    transform: scale(1.1);
+    transition: all 0.1s ease;
+}
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.navbar-li{
+    padding-top:  15px ;
+    list-style-type: none;
+    text-align: center;
+}
+.navbar-href{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: all 0.1s ease;
+    color: #d8d8d8;
+}
+.navbar-href:hover{
+    font-size: 42px;
+    color: #ffffff;
+    transition: all 0.1s ease;
+}
