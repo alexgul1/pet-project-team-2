@@ -6,43 +6,58 @@
     <link rel="stylesheet" href="css/header-banner-about.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <section id="home" >
-        <header>
-            <div id="logo">
-                <embed src="./images/logo.svg" alt width="31"
-                    type="image/svg+xml"
-                    pluginspage="http://www.adobe.com/svg/viewer/install/" /> 
-            </div>
-            <div id="headline">
-                <div class="headline-elem">HOME</div>
-                <div class="headline-elem">ABOUT</div>
-                <div class="headline-elem">WORK</div>
-                <div class="headline-elem">PROCESS</div>
-                <div class="headline-elem">SERVICES</div>
-                <div class="headline-elem">TESTIMONIALS</div>
-                <div class="headline-elem">CONTACT</div>
-            </div>
-        </header>
-        <main>
-            <div class="main-info-table">
-                <div class="container" >
-                    <h1>We Design and Develop</h1>
-                    <div class="main-info-table-text">
-                        We are a new design studio based in Kyiv. We have over
-                        <br>
-                        20 years of combined experience, and know a thing or two
-                        <br>
-                        about designing websites and mobile apps.
-                    </div>
-                    <div class="main-info-table-btn">
-                        <a href="#" >CONTACT US</a>
-                    </div>
+    
+    <!-- первая секция -->
+    <section id="home" class="home">
+        <div class="head">
+            <header>
+                <div class="logo">
+                    <a class="logo-href" href="header-banner-about.html">
+                        <img class="logotype" src="./images/logo.svg" alt width="31"
+                        type="image/svg+xml"
+                        pluginspage="http://www.adobe.com/svg/viewer/install/" />
+                    </a>
                 </div>
-            </div>   
-        </main>
+                <div class="headline">
+                    <div class="headline-elem"><a href="#" class="headline-elem-href">HOME</a></div>
+                    <div class="headline-elem"><a href="#" class="headline-elem-href">ABOUT</a></div>
+                    <div class="headline-elem"><a href="#" class="headline-elem-href">WORK</a></div>
+                    <div class="headline-elem"><a href="#" class="headline-elem-href">PROCESS</a></div>
+                    <div class="headline-elem"><a href="#" class="headline-elem-href">SERVICES</a></div>
+                    <div class="headline-elem"><a href="#" class="headline-elem-href">TESTIMONIALS</a></div>
+                    <div class="headline-elem"><a href="#" class="headline-elem-href">CONTACT</a></div>
+                </div>
+                <div class="menu-button">
+                    <a class="menu-href" href="header-banner-about-menu.html">
+                        <img class="log-menu" class="menu-button-logo" src="./images/menu.svg" 
+                        type="image/svg+xml"
+                        pluginspage="http://www.adobe.com/svg/viewer/install/" />
+                    </a>
+                </div>
+            </header>
+            <main>
+                <div class="main-info-table">
+                    <div class="container" >
+                        <h1>We Design and Develop</h1>
+                        <div class="main-info-table-text">
+                            We are a new design studio based in Kyiv. We have over
+                            <br>
+                            20 years of combined experience, and know a thing or two
+                            <br>
+                            about designing websites and mobile apps.
+                        </div>
+                        <div class="main-info-table-btn">
+                            <a class="btn-contact-us" href="#" >CONTACT US</a>
+                        </div>
+                    </div>
+                </div>   
+            </main>
+        </div>
     </section>
+    <!-- вторая секция -->
     <section id="about">
         <div class="about-info-table">
             <div class="about-container">
@@ -60,5 +75,6 @@
             </div>
         </div>
     </section>
+    <script src="/landing-page/js/header-banner-about.js"></script>
 </body>
 </html>
