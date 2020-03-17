@@ -47,63 +47,62 @@ function checkCollision(index){
     let ball = balloons[index];
     for(let i = 0; i < balloons.length; i++){
         if(i !== index){
+                let diameterVector = {
+                    x: balloons[i].x - ball.x,
+                    y: balloons[i].y - ball.y,
+                };
 
-            let diameterVector = {
-                x: balloons[i].x - ball.x,
-                y: balloons[i].y - ball.y,
-            };
+                let combinedRadius = ball.radius + balloons[i].radius;
 
-            let combinedRadius = ball.radius + balloons[i].radius;
+                let dist = Math.sqrt(Math.pow(diameterVector.x, 2) + Math.pow(diameterVector.y,2));
+                if(dist <= combinedRadius) {
+                    let angle1 = getAngle(diameterVector, ball.direction);
+                    let angle2 = getAngle(diameterVector, balloons[i].direction);
 
-            let dist = Math.sqrt(Math.pow(diameterVector.x, 2) + Math.pow(diameterVector.y,2));
-            if(dist <= combinedRadius){
-                let angle1 = getAngle(diameterVector, ball.direction);
-                let angle2 = getAngle(diameterVector, balloons[i].direction);
+                    if (angle1 >= Math.PI / 2) {
+                        angle1 -= Math.PI / 2;
+                    }
 
-                if(angle1 >= Math.PI/2){
-                    angle1 -= Math.PI/2;
-                }
+                    ctx.beginPath();
+                    ctx.moveTo(ball.x, ball.y);
+                    ctx.lineTo(ball.x - diameterVector.x * 10, ball.y - diameterVector.y * 10);
+                    ctx.strokeStyle = 'rgb(0,255,0)';
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.moveTo(ball.x, ball.y);
+                    ctx.lineTo(ball.x + diameterVector.x * 10, ball.y + diameterVector.y * 10);
+                    ctx.strokeStyle = 'rgb(0,255,0)';
+                    ctx.stroke();
 
-                ctx.beginPath();
-                ctx.moveTo(ball.x,  ball.y);
-                ctx.lineTo(ball.x - diameterVector.x*10, ball.y - diameterVector.y*10);
-                ctx.strokeStyle = 'rgb(0,255,0)';
-                ctx.stroke();
-                ctx.beginPath();
-                ctx.moveTo(ball.x,  ball.y);
-                ctx.lineTo(ball.x + diameterVector.x*10, ball.y + diameterVector.y*10);
-                ctx.strokeStyle = 'rgb(0,255,0)';
-                ctx.stroke();
+                    let lastDirectionBall = ball.direction;
+                    let lastDirectionBalloon = balloons[i].direction;
+                    rotate(ball.direction, -angle1 * 2 - Math.PI);
+                    //rotate(balloons[i].direction, -angle2 * 2 - Math.PI);
 
-                let lastDirectionBall = ball.direction;
-                let lastDirectionBalloon = balloons[i].direction;
-                rotate(ball.direction, -angle1*2 - Math.PI);
-                rotate(balloons[i].direction, -angle2*2 - Math.PI);
+                    ctx.beginPath();
+                    ctx.moveTo(ball.x, ball.y);
+                    ctx.lineTo(ball.x + ball.direction.x * 30, ball.y + ball.direction.y * 30);
+                    ctx.strokeStyle = 'rgb(0,0,0)';
+                    ctx.stroke();
 
-                ctx.beginPath();
-                ctx.moveTo(ball.x, ball.y);
-                ctx.lineTo(ball.x + ball.direction.x*30, ball.y + ball.direction.y*30);
-                ctx.strokeStyle = 'rgb(0,0,0)';
-                ctx.stroke();
-
-                if(lastDirectionBall.x*ball.direction.x + lastDirectionBall.y*ball.direction.y < 0){
-                    rotate(ball.direction, Math.PI)
-                }
-                if(lastDirectionBalloon.x*balloons[i].direction.x + lastDirectionBalloon.y*balloons[i].direction.y < 0){
-                    rotate(balloons[i].direction, Math.PI)
-                }
-
-
-                //rotate(balloons[i].direction, Math.PI/2 + angle2);
-                ball.x += ball.direction.x * Math.abs(dist - combinedRadius);
-                ball.y += ball.direction.y * Math.abs(dist - combinedRadius);
+                    if (lastDirectionBall.x * ball.direction.x + lastDirectionBall.y * ball.direction.y < 0) {
+                        rotate(ball.direction, Math.PI)
+                    }
+                    if (lastDirectionBalloon.x * balloons[i].direction.x + lastDirectionBalloon.y * balloons[i].direction.y < 0) {
+                        //rotate(balloons[i].direction, Math.PI)
+                    }
 
 
-                ctx.beginPath();
-                ctx.arc(ball.x, ball.y , ball.radius, 0, Math.PI*2, false);
-                ctx.stroke();
+                    //rotate(balloons[i].direction, Math.PI/2 + angle2);
+                    ball.x += ball.direction.x * (Math.abs(dist - combinedRadius));
+                    ball.y += ball.direction.y * (Math.abs(dist - combinedRadius));
 
-                debugger
+
+                    ctx.beginPath();
+                    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2, false);
+                    ctx.stroke();
+
+                    debugger
             }
         }
     }
@@ -114,11 +113,21 @@ function draw(ball) {
     ball.x += ball.direction.x*ball.velocity;
     ball.y += ball.direction.y*ball.velocity;
     drawBall(ball);
-    if (ball.x + ball.direction.x*ball.velocity > canvas.width - ballRadius || ball.x + ball.direction.x*ball.velocity < ballRadius) {
+    if (ball.x + ball.direction.x*ball.velocity > canvas.width - ball.radius || ball.x + ball.direction.x*ball.velocity < ball.radius) {
         ball.direction.x *= -1;
     }
-    if (ball.y + ball.direction.y*ball.velocity > canvas.height - ballRadius || ball.y + ball.direction.y*ball.velocity < ballRadius) {
+    if (ball.y + ball.direction.y*ball.velocity > canvas.height - ball.radius || ball.y + ball.direction.y*ball.velocity < ball.radius) {
         ball.direction.y *= -1;
+    }
+    if (ball.x > canvas.width - ball.radius) {
+        ball.x = canvas.width - ball.radius - 1;
+    }else if(ball.x < ball.radius){
+        ball.x = ball.radius + 1;
+    }
+    if (ball.y > canvas.height - ball.radius) {
+        ball.y = canvas.height - ball.radius - 1;
+    }else if(ball.y < ball.radius){
+        ball.y = ball.radius + 1;
     }
 }
 
@@ -130,6 +139,7 @@ function createBall() {
         direction: {x: 1, y: 0,},
         velocity: 2,
         radius: ballRadius,
+        collided: false,
         rgb: randomColor(),
     };
     rotate(ball.direction, Math.random()*2*Math.PI);
@@ -156,6 +166,9 @@ if(balloons !== []){
             draw(balloons[i]);
             //drawVector(balloons[i]);
             checkCollision(i);
+        }
+        for(let i = 0; i < balloons.length; i++){
+            balloons[i].collided = false;
         }
     },16)
 }
