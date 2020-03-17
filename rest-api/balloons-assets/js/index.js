@@ -39,8 +39,7 @@ function rotate(vector, angle){
 }
 
 function getAngle(vector1, vector2) {
-    let angle = Math.atan2(vector2.y, vector2.x) - Math.atan2(vector1.y, vector1.x);
-    return angle
+    return  Math.atan2(vector2.y, vector2.x) - Math.atan2(vector1.y, vector1.x)
 }
 
 function checkCollision(index){
@@ -57,7 +56,7 @@ function checkCollision(index){
                 let dist = Math.sqrt(Math.pow(diameterVector.x, 2) + Math.pow(diameterVector.y,2));
                 if(dist <= combinedRadius) {
                     let angle1 = getAngle(diameterVector, ball.direction);
-                    let angle2 = getAngle(diameterVector, balloons[i].direction);
+                    //let angle2 = getAngle(diameterVector, balloons[i].direction);
 
                     if (angle1 >= Math.PI / 2) {
                         angle1 -= Math.PI / 2;
@@ -96,6 +95,7 @@ function checkCollision(index){
                     //rotate(balloons[i].direction, Math.PI/2 + angle2);
                     ball.x += ball.direction.x * (Math.abs(dist - combinedRadius));
                     ball.y += ball.direction.y * (Math.abs(dist - combinedRadius));
+                    ball.rgb = randomColor();
 
 
                     ctx.beginPath();
