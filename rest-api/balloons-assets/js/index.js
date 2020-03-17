@@ -58,6 +58,8 @@ function checkCollision(index){
             let dist = Math.sqrt(Math.pow(diameterVector.x, 2) + Math.pow(diameterVector.y,2));
             if(dist <= combinedRadius){
                 let angle1 = getAngle(diameterVector, ball.direction);
+                let angle2 = getAngle(diameterVector, balloons[i].direction);
+
                 if(angle1 >= Math.PI/2){
                     angle1 -= Math.PI/2;
                 }
@@ -73,10 +75,10 @@ function checkCollision(index){
                 ctx.strokeStyle = 'rgb(0,255,0)';
                 ctx.stroke();
 
-                //let angle2 = getAngle(diameterVector, balloons[i].direction);
+                let lastDirectionBall = ball.direction;
+                let lastDirectionBalloon = balloons[i].direction;
                 rotate(ball.direction, -angle1*2 - Math.PI);
-                //ball.direction.x *= -1;
-                //ball.direction.y *= -1;
+                rotate(balloons[i].direction, -angle2*2 - Math.PI);
 
                 ctx.beginPath();
                 ctx.moveTo(ball.x, ball.y);
@@ -84,10 +86,17 @@ function checkCollision(index){
                 ctx.strokeStyle = 'rgb(0,0,0)';
                 ctx.stroke();
 
+                if(lastDirectionBall.x*ball.direction.x + lastDirectionBall.y*ball.direction.y < 0){
+                    rotate(ball.direction, Math.PI)
+                }
+                if(lastDirectionBalloon.x*balloons[i].direction.x + lastDirectionBalloon.y*balloons[i].direction.y < 0){
+                    rotate(balloons[i].direction, Math.PI)
+                }
+
 
                 //rotate(balloons[i].direction, Math.PI/2 + angle2);
-                ball.x += ball.direction.x * Math.abs(dist - combinedRadius + 0.2);
-                ball.y += ball.direction.y * Math.abs(dist - combinedRadius + 0.2);
+                ball.x += ball.direction.x * Math.abs(dist - combinedRadius);
+                ball.y += ball.direction.y * Math.abs(dist - combinedRadius);
 
 
                 ctx.beginPath();
