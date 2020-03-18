@@ -1,10 +1,16 @@
-.chat-container, .inputs-container{
+.container{
+    display: flex;
+    justify-content: center;
+}
+.inputs-container{
     display: flex;
     justify-content: center;
     padding: 10px 0;
 }
-
-.chat-container__history{
+.chat-container{
+    overflow-y: auto;
+    display: inline-block;
+    background-color:#ebebe4;
     padding: 5px;
     resize: none;
     width: 400px;
@@ -12,20 +18,26 @@
     border: none;
     border-radius: 5px;
 }
+.chat-container div{
+    word-wrap: break-word;
+}
 .user{
     display: flex;
     width: 400px; 
     justify-content: space-between;
     font-size: 20px;
 }
-.user__name{
+#user__name{
     width: 25%;
 }
-.user__message{
+#user__message{
     width: 70%;
     border: none;
     background-color:#ebebe4;
     border-radius: 5px;
     outline: none;
     padding-left: 5px;
+}
+span {
+    word-wrap: break-word;
 }
