@@ -76,7 +76,8 @@ function addMessage(message) {
     let time = new Date(message.time);
     let chatMessage = document.createElement('div');
     let spanAuthor = (`<span style="color: ${message.color}">${message.author}</span>`);
-    chatMessage.innerHTML = `${spanAuthor} @ ${time.getHours()}:${time.getMinutes()} : ${message.text}`;
+    chatMessage.innerHTML = `${spanAuthor} @ ${(time.getHours() < 10 ? ('0' + time.getHours()) : time.getHours())}:
+    ${(time.getMinutes() < 10 ? ('0' + time.getMinutes()) : time.getMinutes())} : ${message.text}`;
     containerChat.prepend(chatMessage);
 }
 
