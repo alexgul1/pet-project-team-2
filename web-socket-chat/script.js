@@ -44,7 +44,7 @@ function getChatHistory() {
         const chatMessage = document.createElement('div')
         const spanAuthor = (`<span style="color: ${chatHistory[i].color}">${chatHistory[i].author}</span>`)
         chatMessage.innerHTML = `${spanAuthor} @ ${time.getHours()}:${time.getMinutes()} : ${chatHistory[i].text}`
-        containerChat.append(chatMessage);
+        containerChat.prepend(chatMessage);
     }
 }
 
@@ -55,7 +55,7 @@ function addIncomingMessage(message) {
     let chatMessage = document.createElement('div')
     let spanAuthor = (`<span style="color: ${message.color}">${message.author}</span>`)
     chatMessage.innerHTML = `${spanAuthor} @ ${time.getHours()}:${time.getMinutes()} : ${message.text}`
-    containerChat.append(chatMessage);
+    containerChat.prepend(chatMessage);
 }
 
 sendButton[0].addEventListener('click', () => {
