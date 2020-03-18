@@ -1,7 +1,7 @@
 /* 1 секция */
 .home-page{
     height: 100vh;
-    background:url("/landing-page/images/portfolio-single-bckground.png") no-repeat center;
+    background:url("../images/portfolio-single-bckground.png") no-repeat center;
     background-size: cover;
 }
 .content-container{
@@ -55,6 +55,7 @@
     position: absolute;
     height: 600px;
     right: -270px;
+    z-index: 100;
     background-color: rgb(0, 0, 0);
 }
 .home-menu-logo{
@@ -225,7 +226,7 @@
         font-size: 18px;
     }
 }
-@media (min-width: 320px) and (max-width: 600px){
+@media (min-width: 401px) and (max-width: 600px){
     .home-page{
         height:  600px;
     }
@@ -257,6 +258,50 @@
     .home-text-container__button{
         font-size: 18px;
         padding: 20px 50px;
+        background-color: #10c9c3;
+    }
+    .about-us{
+        padding: 30px 40px;
+    }
+    .about-us__title{
+        font-size: 35px;
+    }
+    .about-us__text{
+        font-size: 20px;
+    }
+}
+@media  (max-width: 400px){
+    .home-page, .home-menu{
+        height:  600px;
+    }
+    .headline{
+        display: none;
+    }
+    .home-header__icon-menu{
+        display: grid;
+    }
+    .home-main{
+        padding: 50px 0 ;
+        text-align: center;
+    }
+    .home-header__icon-logo{
+        width: 50px;
+        height: 50px;
+    }
+    .home-header__icon-menu{
+        width: 50px;
+        height: 50px;
+    }
+    .home-text-container__title{
+        font-size: 35px;
+    }
+    .home-text-container__text{
+        font-size: 18px;
+        color: #000000;
+    }
+    .home-text-container__button{
+        font-size: 16px;
+        padding: 18px 46px;
         background-color: #10c9c3;
     }
     .about-us{
