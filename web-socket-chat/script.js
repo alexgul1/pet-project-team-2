@@ -1,20 +1,41 @@
-const socket = new WebSocket('wss://zi-node-chat.herokuapp.com');
+let socket = new WebSocket('wss://zi-node-chat.herokuapp.com');
 let containerChat = document.querySelector('.chat-container');
-let sendButton = document.getElementsByClassName('send-message');
-let userField = document.getElementsByClassName('user__name');
-let messageField = document.getElementsByClassName('user__message');
+let sendButton = document.getElementById('send-message');
+let userField = document.getElementById('user__name');
+let messageField = document.getElementById('user__message');
 
 let chatHistory = null;
 let currentUser = null;
 let nickname = "";
 
+
 socket.addEventListener('open', function (event) {
     console.log("connection open");
+    messageField.disabled = false;
+    clearInterval()
 });
 
 socket.addEventListener('message', function (event) {
     parseData(event.data);
 });
+
+socket.addEventListener('error', function (event) {
+    console.log(event);
+    userField.innerHTML = "Error";
+    messageField.disabled = true;
+    setInterval(() => { socket = new WebSocket('wss://zi-node-chat.herokuapp.com') }, 500)
+
+});
+
+window.addEventListener('offline', function(e)
+    { userField.innerHTML = "Connection error";
+        messageField.disabled = true;
+        console.log(e)});
+
+window.addEventListener('online', function(e)
+    { userField.innerHTML = nickname;
+        messageField.disabled = false;
+        console.log(e)});
 
 function parseData(data){
     let parsedData = JSON.parse(data);
@@ -24,11 +45,11 @@ function parseData(data){
         getChatHistory();
     }else if(parsedData.type === "message"){
         chatHistory.push(parsedData.data);
-        addIncomingMessage(parsedData.data)
+        addMessage(parsedData.data)
     }else if(parsedData.type === "color"){
         currentUser = parsedData;
-        userField[0].innerHTML = nickname;
-        userField[0].style.color = currentUser.data;
+        userField.innerHTML = nickname;
+        userField.style.color = currentUser.data;
     }
 }
 
@@ -38,31 +59,36 @@ function sendData(data) {
 
 
 function getChatHistory() {
-    //debugger
     for(let i = 0; i < chatHistory.length; i++) {
-        let time = new Date(chatHistory[i].time);
-        const chatMessage = document.createElement('div')
-        const spanAuthor = (`<span style="color: ${chatHistory[i].color}">${chatHistory[i].author}</span>`)
-        chatMessage.innerHTML = `${spanAuthor} @ ${time.getHours()}:${time.getMinutes()} : ${chatHistory[i].text}`
-        containerChat.prepend(chatMessage);
+        addMessage(chatHistory[i])
     }
 }
 
 
-function addIncomingMessage(message) {
-    debugger
+
+function keyDetect(key) {
+    if(key.code === "Enter"){
+        sendMessage()
+    }
+}
+
+function addMessage(message) {
     let time = new Date(message.time);
-    let chatMessage = document.createElement('div')
-    let spanAuthor = (`<span style="color: ${message.color}">${message.author}</span>`)
-    chatMessage.innerHTML = `${spanAuthor} @ ${time.getHours()}:${time.getMinutes()} : ${message.text}`
+    let chatMessage = document.createElement('div');
+    let spanAuthor = (`<span style="color: ${message.color}">${message.author}</span>`);
+    chatMessage.innerHTML = `${spanAuthor} @ ${time.getHours()}:${time.getMinutes()} : ${message.text}`;
     containerChat.prepend(chatMessage);
 }
 
-sendButton[0].addEventListener('click', () => {
-    if(nickname ===""){
-        nickname = messageField[0].value;
+function sendMessage(){
+    if(messageField.value.trim() !== ""){
+        if(nickname.trim() === ""){
+            nickname = messageField.value;
+        }
+        sendData(messageField.value);
+        messageField.value = "";
     }
-    sendData(messageField[0].value);
-    messageField[0].value = "";
-});
+}
 
+sendButton.addEventListener('click', sendMessage);
+messageField.addEventListener('keypress', keyDetect);
