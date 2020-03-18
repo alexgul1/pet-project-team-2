@@ -4,9 +4,9 @@ let sendButton = document.getElementsByClassName('send-message');
 let userField = document.getElementsByClassName('user__name');
 let messageField = document.getElementsByClassName('user__message');
 
-let chatHistory = [];
+let chatHistory = null;
 let currentUser = null;
-let nickname;
+let nickname = "";
 
 socket.addEventListener('open', function (event) {
     console.log("connection open");
@@ -14,7 +14,6 @@ socket.addEventListener('open', function (event) {
 
 socket.addEventListener('message', function (event) {
     parseData(event.data);
-    getChatHistory()
 });
 
 function parseData(data){
@@ -22,8 +21,9 @@ function parseData(data){
 
     if(parsedData.type === "history"){
         chatHistory = parsedData.data;
+        getChatHistory();
     }else if(parsedData.type === "message"){
-        chatHistory.push(parsedData);
+        chatHistory.push(parsedData.data);
         addIncomingMessage(parsedData.data)
     }else if(parsedData.type === "color"){
         currentUser = parsedData;
@@ -50,15 +50,18 @@ function getChatHistory() {
 
 
 function addIncomingMessage(message) {
-    //debugger
-    const chatMessage = document.createElement('div')
-    const spanAuthor = (`<span style="color: ${message.color}">${message.author}</span>`)
-    chatMessage.innerHTML = `${spanAuthor} @ ${message.time} : ${message.text}`
+    debugger
+    let time = new Date(message.time);
+    let chatMessage = document.createElement('div')
+    let spanAuthor = (`<span style="color: ${message.color}">${message.author}</span>`)
+    chatMessage.innerHTML = `${spanAuthor} @ ${time.getHours()}:${time.getMinutes()} : ${message.text}`
     containerChat.append(chatMessage);
 }
 
 sendButton[0].addEventListener('click', () => {
-    nickname = messageField[0].value;
+    if(nickname ===""){
+        nickname = messageField[0].value;
+    }
     sendData(messageField[0].value);
     messageField[0].value = "";
 });
