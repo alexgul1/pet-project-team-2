@@ -24,7 +24,6 @@ socket.addEventListener('error', function (event) {
     userField.innerHTML = "Error";
     messageField.disabled = true;
     setInterval(() => { socket = new WebSocket('wss://zi-node-chat.herokuapp.com') }, 500)
-
 });
 
 window.addEventListener('offline', function(e)
