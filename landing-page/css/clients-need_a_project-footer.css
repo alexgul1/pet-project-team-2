@@ -1,9 +1,8 @@
 *{
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
-
-
 #area {
     width: 100%;
     background-color: #141414;
@@ -13,28 +12,29 @@
     color: #bcbcbc;
     text-decoration: none;
 }
+.container-footer a:hover {
+    color: #928f8f;
+    text-decoration: none;
+}
+
 .piroldesign {
     color: white;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
 }
 .container-footer li {
     list-style-type: none;
 }
 .footer {
-    width: 100%;
     display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
     background-color: #141414;
     color: #bcbcbc;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    z-index: 1;
+    padding: 30px 15px 30px;
 }
 .container-footer {
-    margin-left: auto;
-    margin-right: auto;
+    width: 95%;
     display: flex;
     justify-content: space-between;
 }
@@ -43,30 +43,37 @@
     display: block;
     padding: 30px 15px 0px;
 }
+
 .container-footer h3 {
     margin: 0px 0px 20px;
 }
+
 .column2 {
     display: block;
     padding: 30px 15px 0px;
 }
+
 .column3 {
     display: block;
-    padding: 30px 15px 0px;
+    padding: 30px 5px 0px;
 }
+
 .column4 {
     display: block;
-    padding: 30px 15px 0px;
+    padding: 30px 5px 0px;
 }
+
 .main {
     background-color: #bcbcbc;
     width: 100%;
 
 }
-ul {
+
+.llist ul {
     display: block;
-    margin: 0px;
+    padding: 0 10px;
 }
+
 .llist {
     display: flex;
 }
@@ -74,27 +81,25 @@ ul {
 .container-logos {
     width: 100%;
     background-color: #bcbcbc;
-
+    
 }
 
 .logos {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    width: 100%;
 }
 
 .logo {
-    width: 25%;
-    padding: 0;
+    display: block;
+    width: 20%;
+    justify-content: space-between;
 }
-
-.image{
-    margin-left: auto;
-    margin-right: auto;
+.logo img{
+    width: 85%;
+    height: 95%;
 }
-
 .project {
     align-items: center;
     text-align: center;
@@ -103,6 +108,7 @@ ul {
     padding: 25px 0px 25px 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .button {
     margin: 25px auto 0 auto;
     display: block;
@@ -134,10 +140,14 @@ ul {
     width: 50%;
     margin-right: 20px;
     height: 40px;
+    resize: none;
+    border: none;
 }
 .form-control-1-2{
     width: 50%;
     height: 40px;
+    resize: none;
+    border: none;
 }
 .contact2{
     display: flex;
@@ -148,6 +158,8 @@ ul {
     margin: 15px 0;
     width: 100%;
     height: 40px;
+    resize: none;
+    border: none;
 }
 .contact3{
     display: flex;
@@ -158,21 +170,19 @@ ul {
     margin: 15px 0;
     width: 100%;
     height: 180px;
-}
-img {
-    width: 200px;
-    height: 150px;
-}
-.logo {
-    display: flex;
-    width: 150px;
-    padding: 0px 15px 0px;
+    resize: none;
+    border: none;
 }
 
 @media (max-width: 979px) {
     .logo{
         width: 33%;
+        justify-content: center;
+        overflow-x: hidden;
     }
+    .button:hover {
+    background-color: rgb(10, 47, 56);
+}
 }
 
 @media (max-width: 768px) {
@@ -202,9 +212,6 @@ img {
         justify-content: left;
         align-items: flex-start;   
     }
-    ul {
-        padding: 0px;
-    }
     .logos{
         flex-wrap: wrap;
         justify-content: center;
@@ -220,8 +227,11 @@ img {
 }
 
 @media (max-width: 479px) {
+    .logos {
+        justify-content: center;
+    }
     .logo {
-        width: 100%;
+        width: 50%;
         justify-content: center;
     }
 }
