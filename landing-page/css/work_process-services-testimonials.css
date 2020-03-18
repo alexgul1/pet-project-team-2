@@ -40,15 +40,23 @@ body{
     padding-bottom: 50px;
 }
 
-@media (max-width: 480px) {
-    .testimonials-container{
-        height: 600px;
-    }
-}
+
 
 .item-container{
     display: flex;
     justify-content: center;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
+.play-button{
+    transition: 0.4s;
+}
+
+.play-button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
 }
 
 
@@ -93,10 +101,118 @@ body{
 }
 
 .work-container{
-    padding-top: 100px;
+    padding-top: 60px;
     background-color: #ffffff;
     padding-bottom: 100px;
 }
+
+@media (min-width: 768px) and (max-width: 1199px){
+    .work-container{
+        padding-top: 55px;
+    }
+    .services-container{
+        padding-top: 50px;
+    }
+    .testimonials-container{
+        height: 450px;
+        padding-top: 120px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .testimonials-container{
+        height: 380px;
+        padding-top: 80px;
+        padding-bottom: 25px;
+    }
+    .services-container{
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+    .services__item{
+        padding-bottom: 35px;
+    }
+    .work-container{
+        padding-top: 45px;
+        padding-bottom: 40px;
+    }
+    .carousel__text__author{
+        font-size: 10pt;
+    }
+    .carousel__text{
+        font-size: 14pt;
+    }
+}
+
+@media (max-width: 575px) {
+    .work-container{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .services-container{
+        padding-top: 40px;
+    }
+    .services__item{
+        padding-bottom: 30px;
+    }
+    .testimonials-container{
+        padding-top: 60px;
+        height: 350px;
+        padding-bottom: 25px;
+    }
+    .carousel__text__author{
+        font-size: 11pt;
+    }
+    .carousel__text{
+        font-size: 13pt;
+    }
+}
+
+@media (max-width: 574px){
+    .carousel__text{
+        font-size: 12pt;
+    }
+    .carousel__text__author{
+        font-size: 10pt;
+    }
+    .testimonials-container{
+        height: 310px;
+        padding-bottom: 15px;
+    }
+    .item-container{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 460px) {
+    .testimonials-container{
+        padding-top: 50px;
+        height: 300px;
+        padding-bottom: 5px;
+    }
+    .carousel__text__author{
+        font-size: 9pt;
+    }
+    .carousel__text{
+        font-size: 11pt;
+    }
+}
+
+@media (max-width: 370px) {
+    .testimonials-container{
+        padding-top: 35px;
+        height: 300px;
+        padding-bottom: 5px;
+    }
+    .carousel__text__author{
+        font-size: 9pt;
+    }
+    .carousel__text{
+        font-size: 11pt;
+    }
+}
+
 
 .work__title{
     font-size: 30pt;
@@ -121,3 +237,4 @@ body{
 .image{
     position: absolute;
 }
+
