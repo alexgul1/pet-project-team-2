@@ -891,7 +891,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #141414;
     color: #bcbcbc;
-    padding: 30px 15px 30px;
+    padding: 0px 50px 30px 60px;
 }
 .container-footer {
     width: 95%;
@@ -901,7 +901,7 @@ body{
 .column1 {
 
     display: block;
-    padding: 30px 15px 0px;
+    padding-top: 30px;
 }
 
 .container-footer h3 {
@@ -910,17 +910,17 @@ body{
 
 .column2 {
     display: block;
-    padding: 30px 15px 0px;
+    padding-top: 30px ;
 }
 
 .column3 {
     display: block;
-    padding: 30px 5px 0px;
+    padding-top: 30px ;
 }
 
 .column4 {
     display: block;
-    padding: 30px 5px 0px;
+    padding-top: 30px ;
 }
 
 .main {
@@ -929,9 +929,13 @@ body{
 
 }
 
-.llist ul {
+.llist__ul1{
     display: block;
-    padding: 0 10px;
+    padding-right: 20px;
+}
+.llist__ul2{
+    display: block;
+    padding-left: 20px;
 }
 
 .llist {
@@ -959,6 +963,11 @@ body{
 .logo img{
     width: 85%;
     height: 95%;
+    transition: all 0.3s ease;
+}
+.logo img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 .project {
     align-items: center;
@@ -979,9 +988,12 @@ body{
     border: none;
     font-size: 15px;
     color: white;
+    transition: all 0.3s ease;
 }
 .button:hover {
-    background-color: rgb(10, 47, 56);
+    transform: scale(1.03);
+    background-color: #10c9c3;
+    transition: all 0.3s ease;
 }
 .contact {
     width: 700px;
@@ -1040,8 +1052,8 @@ body{
         justify-content: center;
         overflow-x: hidden;
     }
-    .button:hover {
-        background-color: rgb(10, 47, 56);
+    .footer{
+        padding: 0px 30px 30px 40px;
     }
 }
 
@@ -1076,7 +1088,9 @@ body{
         flex-wrap: wrap;
         justify-content: center;
     }
-
+    .footer{
+        padding-left: 10%;
+    }
 }
 
 @media (max-width: 639px){
@@ -1088,10 +1102,18 @@ body{
 
 @media (max-width: 479px) {
     .logos {
-        justify-content: center;
+        display: inline-block;
     }
     .logo {
-        width: 50%;
+        padding: 0 10px;
+        margin: 0 auto ;
+        display: flex;
+        width: 100%;
         justify-content: center;
+        overflow-y: hidden;
+    }
+    .logo img{
+        width: 280px;
+        height: 190px;
     }
 }
