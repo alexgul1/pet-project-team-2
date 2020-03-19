@@ -193,7 +193,7 @@ body {
         padding-top: 50px;
     }
     .container-numbers {
-        padding: 50px 20px 50px 0;
+        padding: 50px 20px 50px 10%;
     }
     .container-numbers .numbers > div{
         padding-bottom: 10px;
