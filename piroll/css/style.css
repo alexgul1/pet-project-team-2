@@ -603,7 +603,14 @@ body{
     flex-direction: column;
     text-align: center;
     padding-bottom: 60px;
+    transition: 0.7s;
 }
+
+.services__item:hover{
+    transform: scale(1.1);
+    transition: all 0.7s ease-in-out;
+}
+
 .services-container{
     background-color: #f5f5f5;
     padding-top: 100px;
