@@ -748,6 +748,8 @@ body{
     }
     .services-container{
         padding-top: 40px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
     .services__item{
         padding-bottom: 30px;
