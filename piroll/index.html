@@ -14,71 +14,83 @@
 
 </head>
 <body>
-<!-- первая секция -->
-<section class="home">
-    <div class="head">
-        <header class="head-header">
-            <div class="logo">
-                <a class="logo-href" href="header-banner-about.html">
-                    <img class="logotype" src="./images/logo.svg" alt width="31"
-                         type="image/svg+xml"
-                         pluginspage="http://www.adobe.com/svg/viewer/install/" />
-                </a>
-            </div>
+
+<div id="headerMenu" class="home-menu">
+    <div class="home-menu-logo">
+        <img src="./images/logo-white.svg"  id="closeTrigerr" class="home-menu-logo__icon">
+    </div>
+    <ul class="home-menu__list">
+        <li class="home-menu__elem">
+            <a class="home-menu__href" href="#">Home</a>
+        </li>
+        <li class="home-menu__elem">
+            <a class="home-menu__href" href="#">About</a>
+        </li>
+        <li class="home-menu__elem">
+            <a class="home-menu__href" href="#">Work</a>
+        </li>
+        <li class="home-menu__elem">
+            <a class="home-menu__href" href="#">Process</a>
+        </li>
+        <li class="home-menu__elem">
+            <a class="home-menu__href" href="#">Services</a>
+        </li>
+        <li class="home-menu__elem">
+            <a class="home-menu__href" href="#">Testimonials</a>
+        </li>
+        <li class="home-menu__elem">
+            <a class="home-menu__href" href="#">Contact</a>
+        </li>
+    </ul>
+</div>
+<header class="home-page">
+    <div class="content-container">
+        <header class="home-header">
+            <a href="#" class="home-header__href">
+                <img src="./images/logo.svg" class="home-header__icon-logo" alt="40px">
+            </a>
+            <a href="#" class="home-header__href">
+                <img src="./images/menu.svg" id="menuTrigerr" class="home-header__icon-menu" alt="40px">
+            </a>
             <div class="headline">
-                <div class="headline-elem"><a href="#" class="headline-elem-href">HOME</a></div>
-                <div class="headline-elem"><a href="#" class="headline-elem-href">ABOUT</a></div>
-                <div class="headline-elem"><a href="#" class="headline-elem-href">WORK</a></div>
-                <div class="headline-elem"><a href="#" class="headline-elem-href">PROCESS</a></div>
-                <div class="headline-elem"><a href="#" class="headline-elem-href">SERVICES</a></div>
-                <div class="headline-elem"><a href="#" class="headline-elem-href">TESTIMONIALS</a></div>
-                <div class="headline-elem"><a href="#" class="headline-elem-href">CONTACT</a></div>
-            </div>
-            <div class="menu-button">
-                <a class="menu-href" href="header-banner-about-menu.html">
-                    <img class="log-menu" class="menu-button-logo" src="./images/menu.svg"
-                         type="image/svg+xml"
-                         pluginspage="http://www.adobe.com/svg/viewer/install/" />
-                </a>
+                <a href="#" class="headline__elem"><p class="headline__text">HOME</p></a>
+                <a href="#" class="headline__elem"><p class="headline__text">ABOUT</p></a>
+                <a href="#" class="headline__elem"><p class="headline__text">WORK</p></a>
+                <a href="#" class="headline__elem"><p class="headline__text">PROCESS</p></a>
+                <a href="#" class="headline__elem"><p class="headline__text">SERVICES</p></a>
+                <a href="#" class="headline__elem"><p class="headline__text">TESTIMONIALS</p></a>
+                <a href="#" class="headline__elem"><p class="headline__text">CONTACT</p></a>
             </div>
         </header>
-        <main>
-            <div class="main-info-table">
-                <div class="main-container" >
-                    <h1 class="main-info-table-title">We Design and Develop</h1>
-                    <div class="main-info-table-text">
-                        We are a new design studio based in Kyiv. We have over
-                        <br>
-                        20 years of combined experience, and know a thing or two
-                        <br>
-                        about designing websites and mobile apps.
-                    </div>
-                    <div class="main-info-table-btn">
-                        <a class="btn-contact-us" href="#" >CONTACT US</a>
-                    </div>
+        <main class="home-main">
+            <div class="home-text-container">
+                <h1 class="home-text-container__title">We Design and Develop</h1>
+                <div class="home-text-container__text">
+                    We are a new design studio based in Kyiv. We have over
+                    <br>
+                    20 years of combined experience, and know a thing or two
+                    <br>
+                    about designing websites and mobile apps.
                 </div>
+                <input type="button" class="home-text-container__button" value="CONTACT US">
             </div>
         </main>
     </div>
-</section>
-<!-- вторая секция -->
-<section class="about">
-    <div class="about-info-table">
-        <div class="about-container">
-            <h2 class="about-info-table-title">About Us</h2>
-            <div class="about-info-table-text">
-                Divide have don't man wherein air fourth. Own itself make have night won't make.
-                <br>
-                A you under Seed appear which good give. Own give air without fowl moveth dry first
-                <br>
-                heaven fruit, dominion she'd won't very all.
-            </div>
-            <div class="about-info-table-sign">
-                <img src="./images/signature.png">
-            </div>
-        </div>
+</header>
+<div class="about-us">
+    <h2 class="about-us__title">About Us</h2>
+    <div class="about-us__text">
+        Divide have don't man wherein air fourth. Own itself make have night won't make.
+        <br>
+        A you under Seed appear which good give. Own give air without fowl moveth dry first
+        <br>
+        heaven fruit, dominion she'd won't very all.
     </div>
-</section>
+    <div class="about-us__sign">
+        <img src='./images/signature.png'>
+    </div>
+</div>
+
 <div class="container-skills">
     <div class="skills-progress">
         <span class="span-montserrat skills-header">Professional Skills</span>
@@ -152,9 +164,8 @@
     <a href="#" class="gallery-item">
         <img class="gallery-image" src="images/work/portfolio-8.jpg">
     </a>
-    <a href="#" class="gallery-button"><span class="span-montserrat">LOAD MORE WORK</span></a>
+    <input type="button" class="gallery-button" value="LOAD MORE WORK">
 </div>
-
 
 <div class="work-container">
     <div class="container">
@@ -320,23 +331,22 @@
     </div>
 </div>
 
-
 <div class="container-logos">
     <div class = "logos">
         <div class="logo">
-            <img src="images/partner-logo-1-dark-300x200.png">
+            <img src="./images/partner-logo-1-dark-300x200.png">
         </div>
         <div class="logo">
-            <img src="images/partner-logo-2-dark-300x200.png">
+            <img src="./images/partner-logo-2-dark-300x200.png">
         </div>
         <div class="logo">
-            <img src="images/partner-logo-3-dark-300x200.png">
+            <img src="./images/partner-logo-3-dark-300x200.png">
         </div>
         <div class="logo">
-            <img src="images/partner-logo-7-dark-300x200.png">
+            <img src="./images/partner-logo-7-dark-300x200.png">
         </div>
         <div class="logo">
-            <img src="images/partner-logo-8-dark-300x200.png">
+            <img src="./images/partner-logo-8-dark-300x200.png">
         </div>
     </div>
 </div>
@@ -347,14 +357,14 @@
     <div class="title">
         <div class="contact">
             <div class="contact1">
-                <input type="text" class="form-control-1-1" name="name" placeholder="Your Name" aria-required="true">
-                <input type="email" class="form-control-1-2" name="email" placeholder="Your Email" aria-required="true">
+                <textarea type="text" class="form-control-1-1" name="name" placeholder="Your Name" aria-required="true"></textarea>
+                <textarea type="email" class="form-control-1-2" name="email" placeholder="Your Email" aria-required="true"></textarea>
             </div>
             <div class="contact2">
-                <input type="text" class="form-control-2" name="title" placeholder="Your Title" aria-required="true">
+                <textarea type="text" class="form-control-2" name="title" placeholder="Your Title" aria-required="true"></textarea>
             </div>
             <div class="contact3">
-                <input type="text" class="form-control-3" name="massage" placeholder="Your Comment" aria-required="true" spellcheck="false">
+                <textarea type="text" class="form-control-3" name="massage" placeholder="Your Comment" aria-required="true" spellcheck="false"></textarea>
             </div>
         </div>
         <button class="button">Send Message</button>
@@ -427,6 +437,42 @@
     </div>
 </footer>
 
+<script>
+    const menu=document.getElementById('headerMenu');
+    const logo=document.getElementById('menuTrigerr');
+    const Close=document.getElementById('closeTrigerr');
+    logo.addEventListener('click', ()=>{
+        menu.style.display='block'
+        logo.style.display='none'
+        let i=53;
+        let op=setInterval(function(){
+            let a = -5*i+'px'
+            menu.style.right=a
+            i--;
+            if(a=='0px')clearInterval(op);
+        },7)
+    });
+    Close.addEventListener('click',()=>{
+        let i=1;
+        let cl=setInterval(function(){
+            let a = -5*i+'px'
+            menu.style.right=a
+            i++;
+            if(a=='-270px'){
+                clearInterval(cl);
+                menu.style.display='none'
+                logo.style.display='grid'
+            }
+        },7)
+    });
+    window.onresize=()=>{
+        if(document.documentElement.clientWidth>810){
+            logo.style.display='none'
+            menu.style.display='none'
+        }
+        else logo.style.display='grid'
+    }
+</script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
