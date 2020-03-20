@@ -4,7 +4,7 @@ let sendButton = document.getElementById('send-message');
 let userField = document.getElementById('user__name');
 let messageField = document.getElementById('user__message');
 
-let chatHistory = null;
+let chatHistory = [];
 let currentUser = null;
 let nickname = "";
 
@@ -50,6 +50,7 @@ function parseData(data){
         userField.innerHTML = nickname;
         userField.style.color = currentUser.data;
     }
+    scroll();
 }
 
 function sendData(data) {
@@ -77,7 +78,7 @@ function addMessage(message) {
     let spanAuthor = (`<span style="color: ${message.color}">${message.author}</span>`);
     chatMessage.innerHTML = `${spanAuthor} @ ${(time.getHours() < 10 ? ('0' + time.getHours()) : time.getHours())}:
     ${(time.getMinutes() < 10 ? ('0' + time.getMinutes()) : time.getMinutes())} : ${message.text}`;
-    containerChat.prepend(chatMessage);
+    containerChat.append(chatMessage);
 }
 
 function sendMessage(){
@@ -88,6 +89,10 @@ function sendMessage(){
         sendData(messageField.value);
         messageField.value = "";
     }
+}
+
+function scroll() {
+    containerChat.scrollTop = 9999;
 }
 
 sendButton.addEventListener('click', sendMessage);
