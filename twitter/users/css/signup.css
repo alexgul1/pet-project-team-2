@@ -75,7 +75,7 @@ body{
     border-style: none;
     border-bottom-style: inset;
     transition:0.3s;
-    border-color:#c0c0c0 ;
+    border-color:#c0c0c0;
 }
 .reg-style-2{
     width: 48%;
@@ -95,11 +95,17 @@ body{
     transition:0.3s;
     outline: none;
 }
+.submit__link{
+    text-decoration: none;
+}
 .registr-footer{
     display: flex;
     background-color: rgb(245, 249, 250);
     padding:30px 5%;
     width: 90%;
+}
+.registr-footer__question{
+    padding-right: 3px;
 }
 .registr-footer__question,.registr-footer__log-href{
     text-decoration: none;
@@ -110,6 +116,7 @@ body{
     color:#41abe1 ;
 }
 .registr-submit__btn:hover{
+    cursor: pointer;
     transition: all 0.3s ease;
     transform: scale(1.1);
 }
