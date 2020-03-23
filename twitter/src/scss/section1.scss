@@ -1,0 +1,18 @@
+.form-control-header__search {
+  background-color: silver;
+  border-radius: 30px;
+
+}
+
+.navbar-nav__compose-button {
+  background-color: #41abe1;
+  border-radius: 5px;
+  width: 40px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .navbar-container__header {
+    max-width: 95%;
+  }
+}
