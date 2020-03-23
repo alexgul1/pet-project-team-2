@@ -1,0 +1,66 @@
+.profile-header {
+  padding-top: 20px;
+}
+
+.profile-element__username {
+  color: #41abe1;
+  cursor: pointer;
+
+}
+.profile-element__biography {
+  font-size: 14px;
+  padding-top: 5px;
+}
+.profile-element__location {
+  display: block;
+  font-size: 14px;
+}
+.profile-element__website {
+  font-size: 14px;
+}
+.profile-search-user {
+  margin-top: 10px;
+  background-color: #eaf3f7;
+}
+.profile-search-user__input {
+  font-size: 14px;
+}
+.follow-panel {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.follow-panel__header {
+  display: block;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+.follow-panel__link {
+  font-size: 12px;
+}
+.follow-panel__user-data {
+  vertical-align: top;
+  font-size: 12px;
+}
+.follow-panel__button {
+  font-size: 13px;
+  display: block;
+}
+.hashtag-panel {
+  margin-top: 10px;
+  padding: 10px;
+}
+.hashtag-list {
+  list-style: none;
+  padding: 0;
+
+}
+.hashtag-list__hashtag:hover {
+  cursor: pointer;
+
+}
+.hashtag__header {
+  font-size: 18px;
+}
