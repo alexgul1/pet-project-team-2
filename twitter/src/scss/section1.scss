@@ -23,3 +23,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .navbar-header__left-nav {
+    display: none;
+  }
+  .navbar-header__logo {
+    display: none !important;
+  }
+}
+
