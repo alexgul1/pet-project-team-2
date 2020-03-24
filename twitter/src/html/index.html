@@ -33,10 +33,10 @@
 			infinite: false,
 			slidesToShow: 6,
 			variableWidth: true,
-			slidesToScroll: 4,
+			slidesToScroll: 6,
 			arrows: true,
-			nextArrow: '<div class="slick-next arrow-next"></div>',
-			prevArrow: '<div class="slick-prev arrow-prev"></div>'
+			nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+			prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 
 		};
 		if($(window).width() <= 991){
@@ -46,8 +46,8 @@
 				variableWidth: true,
 				slidesToScroll: 4,
 				arrows: true,
-				nextArrow: '<div class="slick-next arrow-next"></div>',
-				prevArrow: '<div class="slick-prev arrow-prev"></div>'
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 			};
 		}
 		if($(window).width() <= 767){
@@ -57,8 +57,8 @@
 				variableWidth: true,
 				slidesToScroll: 3,
 				arrows: true,
-				nextArrow: '<div class="slick-next arrow-next"></div>',
-				prevArrow: '<div class="slick-prev arrow-prev"></div>'
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 			};
 		}
 		if($(window).width() <= 575){
@@ -68,8 +68,8 @@
 				variableWidth: true,
 				slidesToScroll: 2,
 				arrows: true,
-				nextArrow: '<div class="slick-next arrow-next"></div>',
-				prevArrow: '<div class="slick-prev arrow-prev"></div>'
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 			};
 		}
 		if($(window).width() <= 370){
@@ -79,8 +79,8 @@
 				variableWidth: true,
 				slidesToScroll: 1,
 				arrows: true,
-				nextArrow: '<div class="slick-next arrow-next"></div>',
-				prevArrow: '<div class="slick-prev arrow-prev"></div>'
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 
 			};
 		}
@@ -88,6 +88,19 @@
 
 		function changeCarousel(){
 			let i = $(window).width();
+			if($(window).width() > 991){
+				obj = {
+					infinite: false,
+					slidesToShow: 6,
+					variableWidth: true,
+					slidesToScroll: 6,
+					arrows: true,
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
 			if($(window).width() <= 991){
 				obj = {
 					infinite: false,
@@ -95,8 +108,8 @@
 					variableWidth: true,
 					slidesToScroll: 4,
 					arrows: true,
-					nextArrow: '<div class="slick-next arrow-next"></div>',
-					prevArrow: '<div class="slick-prev arrow-prev"></div>'
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 				};
 				$('.tweets__header__carousel').slick('unslick');
 				$('.tweets__header__carousel').slick(obj);
@@ -108,8 +121,8 @@
 					variableWidth: true,
 					slidesToScroll: 3,
 					arrows: true,
-					nextArrow: '<div class="slick-next arrow-next"></div>',
-					prevArrow: '<div class="slick-prev arrow-prev"></div>'
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 				};
 				$('.tweets__header__carousel').slick('unslick');
 				$('.tweets__header__carousel').slick(obj);
@@ -121,8 +134,8 @@
 					variableWidth: true,
 					slidesToScroll: 2,
 					arrows: true,
-					nextArrow: '<div class="slick-next arrow-next"></div>',
-					prevArrow: '<div class="slick-prev arrow-prev"></div>'
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 				};
 				$('.tweets__header__carousel').slick('unslick');
 				$('.tweets__header__carousel').slick(obj);
@@ -134,8 +147,8 @@
 					variableWidth: true,
 					slidesToScroll: 1,
 					arrows: true,
-					nextArrow: '<div class="slick-next arrow-next"></div>',
-					prevArrow: '<div class="slick-prev arrow-prev"></div>'
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
 				};
 				$('.tweets__header__carousel').slick('unslick');
 				$('.tweets__header__carousel').slick(obj);
