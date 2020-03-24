@@ -3,6 +3,8 @@
 <head>
 	<title>Twitter</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script src="https://kit.fontawesome.com/ba027b69cd.js" crossorigin="anonymous"></script>
@@ -23,6 +25,110 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+	<script type="text/javascript">
+
+		let obj= {
+			infinite: false,
+			slidesToShow: 6,
+			variableWidth: true,
+			slidesToScroll: 4,
+			arrows: true,
+
+		};
+		if($(window).width() <= 991){
+			obj = {
+				infinite: false,
+				slidesToShow: 5,
+				variableWidth: true,
+				slidesToScroll: 4,
+				arrows: true,
+				nextArrow: $('.arrow-next'),
+				prevArrow: $('.arrow-prev'),
+			};
+		}
+		if($(window).width() <= 767){
+			obj = {
+				infinite: false,
+				slidesToShow: 4,
+				variableWidth: true,
+				slidesToScroll: 3,
+				arrows: true,
+
+			};
+		}
+		if($(window).width() <= 575){
+			obj = {
+				infinite: false,
+				slidesToShow: 3,
+				variableWidth: true,
+				slidesToScroll: 2,
+				arrows: true,
+
+			};
+		}
+		if($(window).width() <= 370){
+			obj = {
+				infinite: false,
+				slidesToShow: 2,
+				variableWidth: true,
+				slidesToScroll: 1,
+				arrows: true,
+
+			};
+		}
+		window.addEventListener("resize", changeCarousel);
+
+		function changeCarousel(){
+			let i = $(window).width();
+			if($(window).width() <= 991){
+				obj = {
+					infinite: false,
+					slidesToShow: 5,
+					variableWidth: true,
+					slidesToScroll: 4,
+					arrows: true
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+			if($(window).width() <= 767){
+				obj = {
+					infinite: false,
+					slidesToShow: 4,
+					variableWidth: true,
+					slidesToScroll: 3,
+					arrows: true
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+			if($(window).width() <= 575){
+				obj = {
+					infinite: false,
+					slidesToShow: 3,
+					variableWidth: true,
+					slidesToScroll: 2,
+					arrows: true
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+			if($(window).width() <= 370){
+				obj = {
+					infinite: false,
+					slidesToShow: 2,
+					variableWidth: true,
+					slidesToScroll: 1,
+					arrows: true
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+		}
+		$('.tweets__header__carousel').slick(obj);
+	</script>
 
 <!--	<script src="js/index.js"></script>-->
 </body>

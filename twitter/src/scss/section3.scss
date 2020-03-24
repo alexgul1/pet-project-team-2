@@ -7,6 +7,10 @@
   padding-left: 15px;
 }
 
+.tweets__header__carousel{
+  max-width: 75%;
+}
+
 .tweets__header__second-row{
   height: 40px;
   text-align: center;
@@ -16,6 +20,8 @@
   color: #66757f;
   font-size: 14px;
   font-weight: bold;
+  padding-left: 0;
+  padding-right: 40px;
 }
 
 .tweets__header__nav-item-second-row[data-active='true']{
@@ -43,6 +49,7 @@
 .tweets_header__title{
   color: #66757f;
   font-size: 15px;
+  font-weight: 600;
 }
 .tweets_header__number{
   font-size: 18px;
@@ -105,10 +112,17 @@
   left: initial;
 }
 
+.slick-next,
+.slick-prev{
+  color:white;
+  background: black;
+}
+
 .tweet__toolbar{
   display: flex;
   text-align: center;
   padding-top: 15px;
+  max-width: 100%;
 }
 .toolbar-number{
   padding-left: 5px;
@@ -123,6 +137,7 @@
   background-color: #ffffff;
   padding: 20px 15px;
   margin-bottom: 10px;
+  max-width: 100%;
 }
 .tweet__text-huge{
   font-size: 28px;
@@ -138,6 +153,20 @@
   color: #8899a6;
   font-size: 13px;
   padding-bottom: 30px;
+}
+
+@media (max-width: 1199px) {
+  .following-area{
+    visibility: collapse;
+    height: 0;
+    width: 0;
+  }
+  .tweets__header__carousel{
+    max-width: 100%;
+  }
+}
+@media (max-width: 991px){
+
 }
 
 .more-options{
