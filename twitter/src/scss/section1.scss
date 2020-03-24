@@ -12,9 +12,30 @@
   text-align: center;
 }
 
+.nav-item__settings {
+  display: none;
+}
+
 .profile-background {
   background-color: #3084ad;
   height: 320px;
+}
+.avatar-container {
+  bottom: -157px;
+  left: 0;
+  position: relative;
+
+  transition: bottom .3s;
+  z-index: 3;
+}
+
+.avatar {
+  background-color: #41abe1;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  height: 200px;
+  position: absolute;
+  width: 200px;
 }
 
 @media (max-width: 992px) {
@@ -29,6 +50,9 @@
   }
   .navbar-header__logo {
     display: none !important;
+  }
+  .nav-item__settings {
+    display: list-item;
   }
 }
 
