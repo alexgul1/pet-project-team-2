@@ -112,10 +112,20 @@
   left: initial;
 }
 
-.slick-next,
-.slick-prev{
-  color:white;
-  background: black;
+.slick-next::before, .slick-prev::before{
+  content: '';
+}
+.slick-disabled{
+  background-color: transparent!important;
+}
+
+.arrow-next{
+  width: 50px;
+  height: 50px;
+}
+.arrow-prev{
+  width: 50px;
+  height: 50px;
 }
 
 .tweet__toolbar{
@@ -165,8 +175,47 @@
     max-width: 100%;
   }
 }
-@media (max-width: 991px){
+@media (max-width: 767px) {
+  .more-options{
+    visibility: collapse;
+    position: absolute;
+    z-index: -1;
+  }
+  .tweet{
+    width: 100%;
+  }
+}
+@media (max-width: 575px){
+  .tweet__toolbar{
+    justify-content: flex-end;
+  }
+  .toolbar-number{
+    width: 0;
+    visibility: collapse;
+  }
+  .toolbar-icon{
+    width: 0;
+    visibility: collapse;
+  }
+}
+@media (max-width: 500px){
+  .tweet__text-huge{
+    font-size: 20px;
+  }
+  .tweet__text{
+    font-size: 12px;
+  }
+}
+@media (max-width: 479px){
+  .tweets__header__second-row{
+    visibility: collapse;
+    height: 0;
+  }
+}
 
+.wrapping-link{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .more-options{
