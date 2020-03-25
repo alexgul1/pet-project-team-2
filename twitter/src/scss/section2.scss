@@ -65,3 +65,11 @@
 .hashtag__header {
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .follow-panel {
+    display: none;
+  }
+  .hashtag-panel {
+    display: none;
+  }
+}

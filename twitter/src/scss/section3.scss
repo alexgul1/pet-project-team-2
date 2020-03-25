@@ -278,3 +278,60 @@
   padding-right: 10px;
 }
 
+.following__body-container {
+  .following__user-card {
+    margin-bottom: 10px;
+    background-color: white;
+    height: 250px;
+    .following__background {
+      height: 40%;
+      background-color: #007bff;
+      .following__avatar-container {
+        bottom: -55px;
+        left: 0;
+        position: relative;
+
+        transition: bottom .3s;
+        z-index: 3;
+      }
+      .following__avatar {
+        background-color: #41abe1;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        height: 70px;
+        position: absolute;
+        width: 70px;
+      }
+    }
+    .following__followbtn {
+      position: absolute;
+      top: 120px;
+      right: 50px;
+      border-radius: 15px;
+      border: none;
+      width: 80px;
+      height: 40px;
+      color: white;
+      background-color: #007bff;
+
+    }
+    .following__followbtn:hover {
+      color: #007bff;
+      background-color: white;
+    }
+    .following__user {
+      margin-top: 30px;
+      .following__fullname,
+      .following__username,
+      .following__biography {
+        display: block;
+        font-size: 14px;
+      }
+      .following__biography {
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
