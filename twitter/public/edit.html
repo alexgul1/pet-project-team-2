@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter</title>
+    <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="./vendor/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="./vendor/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/edit.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="page-container bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">
+        <div class="container navbar-container__header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-header">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="./index.html" class="nav-link"><i class="fas fa-home"> Home</i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-at"> Connect</i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-hashtag"> Discover</i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user"> Me</i></a></li>
+                    <li class="nav-item nav-item__settings dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropDownHeader2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"> Settings</i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownHeader2">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="./main.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="./index.html" class="navbar-brand mx-auto navbar-header__logo" style="color: #41abe1"><i class="fab fa-twitter "></i></a>
+
+
+                <ul class="navbar-nav ml-auto navbar-header__left-nav">
+                    <li class="nav-item">
+                        <div class="input-group">
+                            <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search" id="example-search-input">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-envelope"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropDownHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownHeader">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="./main.html">Logout</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item" ><a href="#" class="nav-link  navbar-nav__compose-button"><i class="fas fa-feather-alt" style="color: white"></i></a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="profile-background">
+        <div class="container">
+            <!-- User main avatar -->
+            <div class="avatar-container">
+                <div class="avatar">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <div class="profile-header">
+                    <h3 class="profile-element profile-element__fullname">Your Name Here</h3>
+                    <a class="text-primary profile-element profile-element__username ">@YourHandleHere</a>
+                </div>
+            </div>
+
+        <div class="col-12 col-md-9 mt-md-5 mt-3">
+            <div class="col border border-light shadow-sm bg-white mb-3 p-3">
+            <form>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="editFirstName">First Name</label>
+                            <input type="text" class="form-control" id="editFirstName" placeholder="First Name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="editLastName">Last Name</label>
+                            <input type="text" class="form-control" id="editLastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="editEmail">Email address</label>
+                    <input type="email" class="form-control" id="editEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="editUserName">Username</label>
+                    <input type="text" class="form-control" id="editUserName" aria-describedby="usernameHelp" placeholder="Username">
+                    <small id="usernameHelp" class="form-text text-muted">Username must be at least three(3) characters long and must can contain one underscore and number</small>
+                </div>
+                <div class="form-group">
+                    <label for="editBio">Biography</label>
+                    <input type="text" class="form-control" id="editBio" aria-describedby="bioHelp" placeholder="Bio">
+                    <small id="bioHelp" class="form-text text-muted">Your bio goes here in max 140 characters.</small>
+                </div>
+                <div class="form-group">
+                    <label for="editDateOfBirth">Date of birth</label>
+                    <input type="date" class="form-control" id="editDateOfBirth" value="2000-01-01">
+                </div>
+            </form>
+
+        </div>
+            <div class="col edit-form border border-light shadow-sm bg-white mb-3 p-4">
+                <form>
+
+                    <div class="form-group">
+                        <label for="editCurrentPassword">Current Password</label>
+                        <input type="password" class="form-control" id="editCurrentPassword" placeholder="Current Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="editPassword">Current Password</label>
+                        <input type="password" class="form-control" id="editPassword" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="editConfirmPassword">Current Password</label>
+                        <input type="password" class="form-control" id="editConfirmPassword" aria-describedby="passwordHelp" placeholder="Confirm Password">
+                        <small id="passwordHelp" class="form-text text-muted">Password must be at least six(6) characters long and must contain one uppercase and number.</small>
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/ba027b69cd.js" crossorigin="anonymous"></script>
+<script src="./vendor/jquery-3.4.1.slim.min.js"></script>
+<script src="./vendor/popper.min.js"></script>
+<script src="./vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="./vendor/slick.min.js"></script>
+
+<!--	<script src="js/index.js"></script>-->
+</body>
+</html>
