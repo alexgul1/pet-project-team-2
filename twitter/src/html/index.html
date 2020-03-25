@@ -155,6 +155,22 @@
 		}
 		$('.tweets__header__carousel').slick(obj);
 	</script>
+	<script>
+		(function($) {
+			$(function() {
+				$('.tweets__header__nav-item').click( function() {
+					$(this)
+							.attr("data-active","true").siblings().attr("data-active","false")
+							.children('.underline').attr("data-active","false");
+					$(this).siblings().children('.tweets_header__number').attr("data-active","false");
+					$(this).children('.underline').attr("data-active","true");
+					$(this).children('.tweets_header__number').attr("data-active","true");
+					$(document).find('.main-tab-content').attr("data-active","false");
+					$(`.${$(this).attr("data-tab_target_class")}`).attr("data-active","true");
+				});
+			});
+		})(jQuery);
+	</script>
 
 <!--	<script src="js/index.js"></script>-->
 </body>

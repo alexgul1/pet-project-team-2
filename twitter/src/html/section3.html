@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-light">
+<nav class="navbar navbar-expand navbar-light navbar-custom">
     <div class="tweets__header-container">
         <div class="container">
             <div class="row w-100 border-bottom tweets__header__first-row">
@@ -79,27 +79,10 @@
         </div>
     </div>
 </nav>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-    (function($) {
-        $(function() {
-            $('.tweets__header__nav-item').click( function() {
-                $(this)
-                    .attr("data-active","true").siblings().attr("data-active","false")
-                    .children('.underline').attr("data-active","false");
-                $(this).siblings().children('.tweets_header__number').attr("data-active","false");
-                $(this).children('.underline').attr("data-active","true");
-                $(this).children('.tweets_header__number').attr("data-active","true");
-                $(document).find('.main-tab-content').attr("data-active","false");
-                $(`.${$(this).attr("data-tab_target_class")}`).attr("data-active","true");
-            });
 
-        });
-    })(jQuery);
-</script>
 
 <div class="tweets__body-container main-tab-content" data-active="true">
-    <div class="container">
+    <div class="container container-tweets-custom">
         <div class="col-xl-9 col-md-9 col-sm-12">
             <div class="row">
                 <div class="tweet rounded border">

@@ -3,6 +3,7 @@
   background-color: #f5f8fa;
 }
 
+
 .tweets__header__first-row{
   padding-left: 15px;
 }
@@ -10,6 +11,17 @@
 .tweets__header__carousel{
   max-width: 75%;
 }
+
+.navbar-custom{
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.container-tweets-custom{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 
 .tweets__header__second-row{
   height: 40px;
@@ -35,6 +47,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding-top: 5px;
 }
 
 
@@ -58,8 +71,6 @@
 .tweets__body-container{
   background-color: #f5f8fa;
   padding-top: 0;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 .tweets__header__nav-item{
@@ -67,13 +78,20 @@
   padding-left: 0;
   background-color: #f5f8fa;
   outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.tweets__header__nav-item:hover{
+  cursor: pointer;
+  background-color: rgba(29, 161, 242, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .tweets_header__title{
-  background-color: #f5f8fa;
+  background-color: transparent;
 }
 .tweets_header__number{
-  background-color: #f5f8fa;
+  background-color: transparent;
 }
 
 .underline{
@@ -85,7 +103,7 @@
   background-color: #0084b4;
 }
 .underline[data-active="false"]{
-  background-color: #f5f8fa;
+  background-color: transparent;
 }
 
 
@@ -123,6 +141,9 @@
 .slick-next::before, .slick-prev::before{
   font-family: inherit;
   color: #0084b4;
+}
+.slick-prev{
+  z-index: 100;
 }
 .slick-disabled{
   background-color: transparent!important;
