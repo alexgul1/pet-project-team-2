@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter</title>
+    <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="./vendor/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="./vendor/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/user-page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="page-container bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">
+        <div class="container navbar-container__header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-header">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-at"></i> Connect</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-hashtag"></i> Discover</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user"></i> Me</a></li>
+                    <li class="nav-item nav-item__settings dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropDownHeader2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"> Settings</i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownHeader2">
+                            <a class="dropdown-item" href="./edit.html">Edit</a>
+                            <a class="dropdown-item" href="./main.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="./index.html" class="navbar-brand mx-auto navbar-header__logo" style="color: #41abe1"><i class="fab fa-twitter "></i></a>
+
+
+                <ul class="navbar-nav ml-auto navbar-header__left-nav">
+                    <li class="nav-item">
+                        <div class="input-group">
+                            <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search" id="example-search-input">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-envelope"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropDownHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownHeader">
+                            <a class="dropdown-item" href="./edit.html">Edit</a>
+                            <a class="dropdown-item" href="./main.html">Logout</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item" ><a href="#" class="nav-link  navbar-nav__compose-button"><i class="fas fa-feather-alt" style="color: white"></i></a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="profile-background">
+        <div class="container">
+            <!-- User main avatar -->
+            <div class="avatar-container">
+                <div class="avatar">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-12 col-md-3"><div class="profile-header">
+                <h3 class="profile-element profile-element__fullname">Your Name Here</h3>
+                <a class="text-primary profile-element profile-element__username ">@YourHandleHere</a>
+                <p class="text-wrap profile-element profile-element__biography">Your bio goes here in max 140 characters. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab.</p>
+                <span class="profile-element profile-element__location"><i class="fas fa-map-marker-alt" style="color: #41abe1"></i> Your location</span>
+                <span class="profile-element profile-element__website"><a href="#" class="text-primary"><i class="fas fa-link" style="color: #41abe1"> Primary link</i></a></span>
+            </div>
+
+                <nav class="navbar navbar-expand-sm rounded border border-primary profile-search-user">
+                    <input class="form-control profile-search-user__input" type="text" placeholder="Tweet to Your Name here">
+                </nav>
+
+                <div class="follow-panel bg-white rounded ">
+    <span class="follow-panel__header">Who to follow
+        <a href="#" class="follow-panel__link text-primary">Refresh</a>
+        <a href="#" class="follow-panel__link text-primary">View all</a>
+    </span>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item justify-content-space-between">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-12">
+                                    <img src="img/user1.png">
+                                </div>
+                                <div class="col-xl-9">
+                                    <span class="follow-panel__user-data text-wrap font-weight-bold">Giulio Bordonaro </span>
+                                    <span class="follow-panel__user-data text-secondary font-weight-normal">@GiulioBx</span>
+                                    <button type="button" class="btn btn-outline-primary follow-panel__button"><i class="fas fa-user-plus follow-panel__follow-icon"></i> Follow</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-12">
+                                    <img src="img/user2.png">
+                                </div>
+                                <div class="col-xl-9">
+                                    <span class="follow-panel__user-data text-wrap font-weight-bold">Interesting User </span>
+                                    <span class="follow-panel__user-data text-secondary font-weight-normal">@User</span>
+                                    <button type="button" class="btn btn-outline-primary follow-panel__button"><i class="fas fa-user-plus follow-panel__follow-icon"></i> Follow</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-xl-3 col-md-12">
+                                    <img src="img/user3.png">
+                                </div>
+                                <div class="col-xl-9">
+                                    <span class="follow-panel__user-data text-wrap font-weight-bold">Other User </span>
+                                    <span class="follow-panel__user-data text-secondary font-weight-normal">@Other User</span>
+                                    <button type="button" class="btn btn-outline-primary follow-panel__button"><i class="fas fa-user-plus follow-panel__follow-icon"></i> Follow</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="container row">
+                        <div class="col-md-6"><a href="#" class="follow-panel__link text-primary">Popular accounts </a></div>
+                        <div class="col-md-6"><a href="#" class="follow-panel__link text-primary"> Find friends</a></div>
+
+
+                    </div>
+
+                </div>
+                <div class="hashtag-panel bg-white rounded ">
+                    <span class="hashtag__header">Worldwide Trends</span>
+                    <a class="text-primary"> Change</a>
+                    <ul class="hashtag-list">
+                        <li class="hashtag-list__hashtag text-primary">#NewTwitter</li>
+                        <li class="hashtag-list__hashtag text-primary">#GBX</li>
+                        <li class="hashtag-list__hashtag text-primary">#graphicdesign</li>
+                        <li class="hashtag-list__hashtag text-primary">#mockup</li>
+                        <li class="hashtag-list__hashtag text-primary">#layout</li>
+                        <li class="hashtag-list__hashtag text-primary">#PSD</li>
+                        <li class="hashtag-list__hashtag text-primary">#FreeTemplate</li>
+                        <li class="hashtag-list__hashtag text-primary">#Lorem</li>
+                        <li class="hashtag-list__hashtag text-primary">#ipsum</li>
+                        <li class="hashtag-list__hashtag text-primary">#amet</li>
+                    </ul>
+                </div></div>
+            <div class="col-12 col-md-9"><nav class="navbar navbar-expand navbar-light navbar-custom">
+                <div class="tweets__header-container">
+                    <div class="container">
+                        <div class="row w-100 border-bottom tweets__header__first-row">
+
+                            <div class="tweets__header__carousel">
+                                <div class="tweets__header__nav-item" data-active="true" data-tab_target_class="tweets__body-container">
+                                    <div class="tweets_header__title">
+                                        Tweet
+                                    </div>
+                                    <div class="tweets_header__number"  data-active="true">
+                                        781
+                                    </div>
+                                    <div class="underline" data-active="true"></div>
+                                </div>
+                                <div class="tweets__header__nav-item" data-active="false">
+                                    <div class="tweets_header__title">
+                                        Photos/Videos
+                                    </div>
+                                    <div class="tweets_header__number" data-active="false">
+                                        62
+                                    </div>
+                                    <div class="underline" data-active="false"></div>
+                                </div>
+                                <div class="tweets__header__nav-item" data-active="false" data-tab_target_class="following__body-container">
+                                    <div class="tweets_header__title">
+                                        Following
+                                    </div>
+                                    <div class="tweets_header__number" data-active="false">
+                                        164
+                                    </div>
+                                    <div class="underline" data-active="false"></div>
+                                </div>
+                                <div class="tweets__header__nav-item" data-active="false" data-tab_target_class="following__body-container">
+                                    <div class="tweets_header__title">
+                                        Followers
+                                    </div>
+                                    <div class="tweets_header__number" data-active="false">
+                                        277
+                                    </div>
+                                    <div class="underline" data-active="false"></div>
+                                </div>
+                                <div class="tweets__header__nav-item" data-active="false">
+                                    <div class="tweets_header__title">
+                                        Favorites
+                                    </div>
+                                    <div class="tweets_header__number"  data-active="false">
+                                        24
+                                    </div>
+                                    <div class="underline" data-active="false"></div>
+                                </div>
+                                <div class="tweets__header__nav-item" data-active="false">
+                                    <div class="tweets_header__title">
+                                        View
+                                    </div>
+                                    <div class="tweets_header__number"  data-active="false">
+                                        Lists
+                                    </div>
+                                    <div class="underline" data-active="false"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto ml-auto following-area align-items-center justify-content-end">
+                                <div class="settings" id="settingsDropdown" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                                    <i class="fas fa-cog settings__gear-icon" style="color: #66757f"></i>
+                                    <i class="fas fa-chevron-down settings__arrow-icon" style="color: #66757f"></i>
+                                </div>
+                                <div class="dropdown-menu settings-menu" aria-labelledby="settingsDropdown">
+                                    <a class="dropdown-item" href="./edit.html">Edit</a>
+                                    <a class="dropdown-item" href="./main.html">Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mr-auto border-bottom w-100 tweets__header__second-row align-items-center">
+                            <div class="col-auto tweets__header__nav-item-second-row" data-active="true"> Tweets </div>
+                            <div class="col-auto tweets__header__nav-item-second-row" data-active="false"> Tweets and replies </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+
+                <div class="tweets__body-container main-tab-content" data-active="true">
+                    <div class="col-xl-9 col-md-9 col-sm-12">
+                        <div class="tweets__new-tweet border shadow-sm mb-3 p-3">
+                            <form>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="tweetsNewTweet" placeholder="What's happening?"></textarea>
+                                </div>
+
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn btn-primary tweets__new-tweet-btn"><i class="fas fa-feather-alt"></i> Tweet</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="container container-tweets-custom">
+                        <div class="col-xl-9 col-md-9 col-sm-12">
+
+                            <div class="row">
+                                <div class="tweet rounded border">
+                                    <div class="tweet__time">
+                                        38m ago
+                                    </div>
+                                    <div class="tweet__text-huge">
+                                        Twitter changes its layout, again. This one
+                                        is a huge tweet.
+                                        <a href="" class="wrapping-link">#NewTwitter</a>
+                                    </div>
+                                    <div class="tweet__toolbar align-items-center">
+                                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            150
+                                        </div>
+
+                                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            35
+                                        </div>
+
+                                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            50
+                                        </div>
+
+                                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="tweet-media rounded border">
+                                    <div class="tweet__time">
+                                        1h ago
+                                    </div>
+                                    <div class="tweet__text-huge">
+                                        This is a tweet with a nice <a href="">#picture</a> attached.
+                                        Feel free to insert your favorite image here.
+                                    </div>
+                                    <div class="tweet__photo"></div>
+                                    <div class="tweet__toolbar align-items-center">
+                                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            319
+                                        </div>
+
+                                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            23
+                                        </div>
+
+                                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            89
+                                        </div>
+
+                                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                                        <div class="more-options ml-auto toolbar-number">
+                                            <a href=""> View more photos</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="tweet rounded border">
+                                    <div class="tweet__time"> 2d ago</div>
+                                    <div class="tweet__text">
+                                        And now comes a regular tweet! Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim. <a href="" class="wrapping-link"> #placeholdertexе </a>
+                                    </div>
+                                    <div class="tweet__toolbar align-items-center">
+                                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            150
+                                        </div>
+
+                                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            35
+                                        </div>
+
+                                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            50
+                                        </div>
+
+                                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="retweet rounded border">
+                                    <div class="tweet__retweet">
+                                        <div class="retweet__time">
+                                            <div class="retweet-icon rounded">
+                                                <i class="fas fa-retweet toolbar-icon" style="color: #ffffff"></i>
+                                            </div>
+                                            <div class="retweet__text">
+                                                retweeted on feb 13
+                                            </div>
+                                        </div>
+                                        <div class="retweet__author">
+                                            <div class="author-icon"></div>
+                                            <div class="author-name">
+                                                <a href="">Giulio Bordonaro</a> @GiulioBX · Feb 13
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tweet__text">
+                                        I hope you find this #PSD <a href="">#template</a> useful. You can find the latest version
+                                        on <a href="" class="wrapping-link">http://j.mp/twitter2014gui</a> (if you have any suggestion please contact me)
+                                    </div>
+                                    <div class="tweet__toolbar align-items-center">
+                                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            150
+                                        </div>
+
+                                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            35
+                                        </div>
+
+                                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                                        <div class="toolbar-number">
+                                            50
+                                        </div>
+
+                                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="following__body-container main-tab-content" data-active="false">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <div class="following__user-card border rounded">
+                                    <div class="following__background">
+                                        <div class="container">
+                                            <div class="following__avatar-container">
+                                                <div class="following__avatar">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="following__followbtn" value="Follow">
+                                    <div class="container following__user">
+                                        <span class="following__fullname font-weight-bold">User Name</span>
+                                        <span class="following__username">@username</span>
+                                        <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="following__user-card border rounded">
+                                    <div class="following__background">
+                                        <div class="container">
+                                            <div class="following__avatar-container">
+                                                <div class="following__avatar">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="following__followbtn" value="Follow">
+                                    <div class="container following__user">
+                                        <span class="following__fullname font-weight-bold">User Name</span>
+                                        <span class="following__username">@username</span>
+                                        <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="following__user-card border rounded">
+                                    <div class="following__background">
+                                        <div class="container">
+                                            <div class="following__avatar-container">
+                                                <div class="following__avatar">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="following__followbtn" value="Follow">
+                                    <div class="container following__user">
+                                        <span class="following__fullname font-weight-bold">User Name</span>
+                                        <span class="following__username">@username</span>
+                                        <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="following__user-card border rounded">
+                                    <div class="following__background">
+                                        <div class="container">
+                                            <div class="following__avatar-container">
+                                                <div class="following__avatar">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" class="following__followbtn" value="Follow">
+                                    <div class="container following__user">
+                                        <span class="following__fullname font-weight-bold">User Name</span>
+                                        <span class="following__username">@username</span>
+                                        <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <footer class="tweets__footer">
+                    <div class="line1px"></div>
+                    <i class="fab fa-twitter footer-icon" style="color: #cccccc"></i>
+                    <div class="line1px"></div>
+                </footer>
+
+
+                <!--<i class="fas fa-retweet"></i>-->
+                <!--<i class="fas fa-star"></i>-->
+                <!--<i class="far fa-comment"></i>-->
+                <!--<i class="fas fa-cog"></i>--></div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/ba027b69cd.js" crossorigin="anonymous"></script>
+<script src="./vendor/jquery-3.4.1.slim.min.js"></script>
+<script src="./vendor/popper.min.js"></script>
+<script src="./vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="./vendor/slick.min.js"></script>
+
+<script type="text/javascript">
+
+    let obj= {
+        infinite: false,
+        slidesToShow: 6,
+        variableWidth: true,
+        slidesToScroll: 6,
+        arrows: true,
+        nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+        prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+
+    };
+    if($(window).width() <= 991){
+        obj = {
+            infinite: false,
+            slidesToShow: 5,
+            variableWidth: true,
+            slidesToScroll: 4,
+            arrows: true,
+            nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+            prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+        };
+    }
+    if($(window).width() <= 767){
+        obj = {
+            infinite: false,
+            slidesToShow: 4,
+            variableWidth: true,
+            slidesToScroll: 3,
+            arrows: true,
+            nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+            prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+        };
+    }
+    if($(window).width() <= 575){
+        obj = {
+            infinite: false,
+            slidesToShow: 3,
+            variableWidth: true,
+            slidesToScroll: 2,
+            arrows: true,
+            nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+            prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+        };
+    }
+    if($(window).width() <= 370){
+        obj = {
+            infinite: false,
+            slidesToShow: 2,
+            variableWidth: true,
+            slidesToScroll: 1,
+            arrows: true,
+            nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+            prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+
+        };
+    }
+    window.addEventListener("resize", changeCarousel);
+
+    function changeCarousel(){
+        let i = $(window).width();
+        if($(window).width() > 991){
+            obj = {
+                infinite: false,
+                slidesToShow: 6,
+                variableWidth: true,
+                slidesToScroll: 6,
+                arrows: true,
+                nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+                prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+            };
+            $('.tweets__header__carousel').slick('unslick');
+            $('.tweets__header__carousel').slick(obj);
+        }
+        if($(window).width() <= 991){
+            obj = {
+                infinite: false,
+                slidesToShow: 5,
+                variableWidth: true,
+                slidesToScroll: 4,
+                arrows: true,
+                nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+                prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+            };
+            $('.tweets__header__carousel').slick('unslick');
+            $('.tweets__header__carousel').slick(obj);
+        }
+        if($(window).width() <= 767){
+            obj = {
+                infinite: false,
+                slidesToShow: 4,
+                variableWidth: true,
+                slidesToScroll: 3,
+                arrows: true,
+                nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+                prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+            };
+            $('.tweets__header__carousel').slick('unslick');
+            $('.tweets__header__carousel').slick(obj);
+        }
+        if($(window).width() <= 575){
+            obj = {
+                infinite: false,
+                slidesToShow: 3,
+                variableWidth: true,
+                slidesToScroll: 2,
+                arrows: true,
+                nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+                prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+            };
+            $('.tweets__header__carousel').slick('unslick');
+            $('.tweets__header__carousel').slick(obj);
+        }
+        if($(window).width() <= 370){
+            obj = {
+                infinite: false,
+                slidesToShow: 2,
+                variableWidth: true,
+                slidesToScroll: 1,
+                arrows: true,
+                nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+                prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+            };
+            $('.tweets__header__carousel').slick('unslick');
+            $('.tweets__header__carousel').slick(obj);
+        }
+    }
+    $('.tweets__header__carousel').slick(obj);
+</script>
+<script>
+    (function($) {
+        $(function() {
+            $('.tweets__header__nav-item').click( function() {
+                $(this)
+                    .attr("data-active","true").siblings().attr("data-active","false")
+                    .children('.underline').attr("data-active","false");
+                $(this).siblings().children('.tweets_header__number').attr("data-active","false");
+                $(this).children('.underline').attr("data-active","true");
+                $(this).children('.tweets_header__number').attr("data-active","true");
+                $(document).find('.main-tab-content').attr("data-active","false");
+                $(`.${$(this).attr("data-tab_target_class")}`).attr("data-active","true");
+            });
+        });
+    })(jQuery);
+</script>
+
+<!--	<script src="js/index.js"></script>-->
+</body>
+</html>
