@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twitter</title>
+    <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="./vendor/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="./vendor/slick-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/search-page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="page-container bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm fixed-top">
+        <div class="container navbar-container__header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-header">
+
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="./index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-at"></i> Connect</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-hashtag"></i> Discover</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-user"></i> Me</a></li>
+                    <li class="nav-item nav-item__settings dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropDownHeader2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i> Settings</a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownHeader2">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="./main.html">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="./index.html" class="navbar-brand mx-auto navbar-header__logo" style="color: #41abe1"><i class="fab fa-twitter "></i></a>
+
+
+                <ul class="navbar-nav ml-auto navbar-header__left-nav">
+                    <li class="nav-item">
+                        <div class="input-group">
+                            <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search" id="example-search-input">
+                            <span class="input-group-append">
+                                <button class="btn btn-outline-secondary border-left-0 border" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="fas fa-envelope"></i></a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropDownHeader" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropDownHeader">
+                            <a class="dropdown-item" href="#">Edit</a>
+                            <a class="dropdown-item" href="./main.html">Logout</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item" ><a href="#" class="nav-link  navbar-nav__compose-button"><i class="fas fa-feather-alt" style="color: white"></i></a></li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-4 mt-md-5 mt-3">
+                <div class="search__profile-header border rounded bg-white">
+                    <div class="search__profile-header-bg">
+                        <div class="container">
+                            <div class="search-profile-header__avatar-container">
+                                <div class="search-profile-header__avatar">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container edit__user">
+                        <span class="edit__fullname font-weight-bold">User Name</span>
+                        <span class="edit__username">@username</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 mt-md-5 mt-3">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/ba027b69cd.js" crossorigin="anonymous"></script>
+<script src="./vendor/jquery-3.4.1.slim.min.js"></script>
+<script src="./vendor/popper.min.js"></script>
+<script src="./vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="./vendor/slick.min.js"></script>
+
+<!--	<script src="js/index.js"></script>-->
+</body>
+</html>
