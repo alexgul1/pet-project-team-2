@@ -348,7 +348,8 @@
       height: 40px;
       color: white;
       background-color: #007bff;
-      outline: none;
+      transition: ease-in-out .3s;
+      outline: none
     }
     .following__followbtn:hover {
       color: #007bff;
