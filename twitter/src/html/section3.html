@@ -4,14 +4,14 @@
             <div class="row w-100 border-bottom tweets__header__first-row">
 
                 <div class="tweets__header__carousel">
-                    <div class="tweets__header__nav-item" data-active="true">
+                    <div class="tweets__header__nav-item" data-active="true" data-tab_target_class="tweets__body-container">
                         <div class="tweets_header__title">
                             Tweet
                         </div>
                         <div class="tweets_header__number"  data-active="true">
                             781
                         </div>
-                        <div class="underline-blue"></div>
+                        <div class="underline" data-active="true"></div>
                     </div>
                     <div class="tweets__header__nav-item" data-active="false">
                         <div class="tweets_header__title">
@@ -20,25 +20,25 @@
                         <div class="tweets_header__number" data-active="false">
                             62
                         </div>
-                        <div class="underline"></div>
+                        <div class="underline" data-active="false"></div>
                     </div>
-                    <div class="tweets__header__nav-item" data-active="false">
+                    <div class="tweets__header__nav-item" data-active="false" data-tab_target_class="following__body-container">
                         <div class="tweets_header__title">
                             Following
                         </div>
                         <div class="tweets_header__number" data-active="false">
                             164
                         </div>
-                        <div class="underline"></div>
+                        <div class="underline" data-active="false"></div>
                     </div>
-                    <div class="tweets__header__nav-item" data-active="false">
+                    <div class="tweets__header__nav-item" data-active="false" data-tab_target_class="following__body-container">
                         <div class="tweets_header__title">
                             Followers
                         </div>
                         <div class="tweets_header__number" data-active="false">
                             277
                         </div>
-                        <div class="underline"></div>
+                        <div class="underline" data-active="false"></div>
                     </div>
                     <div class="tweets__header__nav-item" data-active="false">
                         <div class="tweets_header__title">
@@ -47,7 +47,7 @@
                         <div class="tweets_header__number"  data-active="false">
                             24
                         </div>
-                        <div class="underline"></div>
+                        <div class="underline" data-active="false"></div>
                     </div>
                     <div class="tweets__header__nav-item" data-active="false">
                         <div class="tweets_header__title">
@@ -56,7 +56,7 @@
                         <div class="tweets_header__number"  data-active="false">
                             Lists
                         </div>
-                        <div class="underline"></div>
+                        <div class="underline" data-active="false"></div>
                     </div>
                 </div>
 
@@ -67,9 +67,8 @@
                         <i class="fas fa-chevron-down settings__arrow-icon" style="color: #66757f"></i>
                     </div>
                     <div class="dropdown-menu settings-menu" aria-labelledby="settingsDropdown">
-                        <a class="dropdown-item" href="#">Whatever</a>
-                        <a class="dropdown-item" href="#">Don't bother</a>
-                        <a class="dropdown-item" href="#">The End</a>
+                        <a class="dropdown-item" href="./edit.html">Edit</a>
+                        <a class="dropdown-item" href="./main.html">Log Out</a>
                     </div>
                 </div>
             </div>
@@ -80,8 +79,26 @@
         </div>
     </div>
 </nav>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    (function($) {
+        $(function() {
+            $('.tweets__header__nav-item').click( function() {
+                $(this)
+                    .attr("data-active","true").siblings().attr("data-active","false")
+                    .children('.underline').attr("data-active","false");
+                $(this).siblings().children('.tweets_header__number').attr("data-active","false");
+                $(this).children('.underline').attr("data-active","true");
+                $(this).children('.tweets_header__number').attr("data-active","true");
+                $(document).find('.main-tab-content').attr("data-active","false");
+                $(`.${$(this).attr("data-tab_target_class")}`).attr("data-active","true");
+            });
 
-<div class="tweets__body-container">
+        });
+    })(jQuery);
+</script>
+
+<div class="tweets__body-container main-tab-content" data-active="true">
     <div class="container">
         <div class="col-xl-9 col-md-9 col-sm-12">
             <div class="row">
@@ -220,7 +237,7 @@
     </div>
 </div>
 
-<div class="following__body-container">
+<div class="following__body-container main-tab-content" data-active="false">
     <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6">
@@ -307,6 +324,7 @@
 
     </div>
 </div>
+
 
 <footer class="tweets__footer">
     <div class="line1px"></div>

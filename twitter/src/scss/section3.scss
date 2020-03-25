@@ -31,11 +31,12 @@
   opacity: 0.75;
 }
 
-.tweets__header__nav-item[data-active='true']{
+.tweets__header__nav-item{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+
 
 .tweets_header__number[data-active='true']{
   color: #66757f;
@@ -64,10 +65,8 @@
 .tweets__header__nav-item{
   padding-right: 18px;
   padding-left: 0;
-}
-
-.tweets__header__nav-item{
   background-color: #f5f8fa;
+  outline: none;
 }
 
 .tweets_header__title{
@@ -80,7 +79,15 @@
 .underline{
   height: 2px;
   background-color: transparent;
+  margin-right: -20px;
 }
+.underline[data-active="true"]{
+  background-color: #0084b4;
+}
+.underline[data-active="false"]{
+  background-color: #f5f8fa;
+}
+
 
 .underline-blue{
   height: 2px;
@@ -276,6 +283,13 @@
   transform: scale(1.5);
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.main-tab-content[data-active="true"]{
+
+}
+.main-tab-content[data-active="false"]{
+  display: none;
 }
 
 .following__body-container {
