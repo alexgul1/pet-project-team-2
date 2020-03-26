@@ -8,6 +8,7 @@
         "start": "gulp",
         "clean": "gulp clean",
         "build": "gulp build",
+        "postinstall" : "gulp build",
         "test": "nyc mocha --opts ./mocha.opts",
         "lint:js": "eslint --ext .js src"
     },
