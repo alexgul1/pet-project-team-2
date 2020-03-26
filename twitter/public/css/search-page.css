@@ -33,3 +33,39 @@
     display: block;
     font-size: 14px;
 }
+.user__twt{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+}
+.user__tff{
+    color:#41abe1;
+}
+.find__avatar{
+    background-color: #41abe1;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+}
+.search-result{
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.follow-find-res{
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #41abe1;
+    padding: 3px 7px;
+    border: none;
+    border-radius: 16px;
+    transition:0.3s;
+    outline: none;
+}
+.follow-find-res:hover{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+.fix-some-pos{
+    margin-top: -5px;
+}
