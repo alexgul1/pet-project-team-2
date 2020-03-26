@@ -35,10 +35,18 @@
 }
 .user__twt{
     color: rgba(0, 0, 0, 0.5);
-    font-size: 12px;
+    font-size: 15px;
 }
 .user__tff{
+    font-size: 18px;
     color:#41abe1;
+}
+.find__l-f-name{
+    color:#41abe1;
+}
+.find__username{
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
 }
 .find__avatar{
     background-color: #41abe1;
@@ -55,7 +63,8 @@
     font-size: 10px;
     color: #ffffff;
     background-color: #41abe1;
-    padding: 3px 7px;
+    width: 108px;
+    padding: 3px 0px;
     border: none;
     border-radius: 16px;
     transition:0.3s;
@@ -68,4 +77,20 @@
 }
 .fix-some-pos{
     margin-top: -5px;
+}
+@media (max-width:991px){
+    .user__twt{
+        font-size: 12px;
+    }
+    .user__tff{
+        font-size: 16px;
+    }
+}
+@media (max-width:767px){
+    .user__twt{
+        font-size: 15px;
+    }
+    .user__tff{
+        font-size: 18px;
+    }
 }
