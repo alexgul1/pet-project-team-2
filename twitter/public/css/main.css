@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #e5edf0;
+}
+.twitter-contain {
+    display: block;
+    padding: 125px 35%;
+    width: 30%;
+}
+.twit-brd {
+    font-size: 25px;
+    color: #41abe1;
+} 
+.sign-up-txt h3 {
+    font-size: 23px;
+    margin: 0;
+}
+.sign-up-txt p {
+    font-size: 12px;
+    font-weight: 700;
+}
+.btn-container {
+    display: block;
+}
+.sign-up-btn {
+    display: block;
+    background-color: #41abe1;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 25px;
+    font-weight: 700;
+    border-radius: 12px;
+    margin-bottom: 2%;
+    outline: none;
+    transition:0.3s;
+}
+.sign-up-btn:hover {
+    cursor: pointer;
+    transition:0.3s;
+    background-color: #3084ad;
+}
+.login-btn {
+    display: block;
+    background-color: white;
+    color: #41abe1;
+    border: none;
+    width: 100%;
+    height: 25px;
+    font-weight: 700;
+    border-radius: 12px;
+    outline: none;
+    transition:0.3s;
+}
+.login-btn:hover {
+    cursor: pointer;
+    transition:0.3s;
+    background-color: rgb(221, 218, 218);
+}
+.sign-up-link, .login-link {
+    text-decoration: none;
+}
+@media (max-width: 979px) {
+    .twitter-contain {
+        padding-top: 150px;
+        width: 40%;
+        padding-right: 30%;
+        padding-left: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .twitter-contain {
+        padding-top: 175px;
+        width: 50%;
+        padding-right: 25%;
+        padding-left: 25%;
+    }
+}
+
+@media (max-width: 639px){
+    .twitter-contain {
+        padding-top: 150px;
+        width: 50%;
+        padding-right: 25%;
+        padding-left: 25%;
+    }
+}
+
+@media (max-width: 479px) {
+    .twitter-contain {
+        padding-top: 125px;
+        width: 60%;
+        padding-right: 20%;
+        padding-left: 20%;
+    }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter</title>
+	<link rel="stylesheet" href="./vendor/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" charset="UTF-8" href="./vendor/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="./vendor/slick-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="page-container bg-light">
+		@@include('./section1.html')
+		<div class="container ">
+			<div class="row">
+				<div class="col-12 col-md-3">@@include('./section2.html')</div>
+				<div class="col-12 col-md-9">@@include('./section3.html')</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="https://kit.fontawesome.com/ba027b69cd.js" crossorigin="anonymous"></script>
+	<script src="./vendor/jquery-3.4.1.slim.min.js"></script>
+	<script src="./vendor/popper.min.js"></script>
+	<script src="./vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./vendor/slick.min.js"></script>
+
+	<script type="text/javascript">
+
+		let obj= {
+			infinite: false,
+			slidesToShow: 6,
+			variableWidth: true,
+			slidesToScroll: 6,
+			arrows: true,
+			nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+			prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+
+		};
+		if($(window).width() <= 991){
+			obj = {
+				infinite: false,
+				slidesToShow: 5,
+				variableWidth: true,
+				slidesToScroll: 4,
+				arrows: true,
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+			};
+		}
+		if($(window).width() <= 767){
+			obj = {
+				infinite: false,
+				slidesToShow: 4,
+				variableWidth: true,
+				slidesToScroll: 3,
+				arrows: true,
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+			};
+		}
+		if($(window).width() <= 575){
+			obj = {
+				infinite: false,
+				slidesToShow: 3,
+				variableWidth: true,
+				slidesToScroll: 2,
+				arrows: true,
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+			};
+		}
+		if($(window).width() <= 370){
+			obj = {
+				infinite: false,
+				slidesToShow: 2,
+				variableWidth: true,
+				slidesToScroll: 1,
+				arrows: true,
+				nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+				prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+
+			};
+		}
+		window.addEventListener("resize", changeCarousel);
+
+		function changeCarousel(){
+			let i = $(window).width();
+			if($(window).width() > 991){
+				obj = {
+					infinite: false,
+					slidesToShow: 6,
+					variableWidth: true,
+					slidesToScroll: 6,
+					arrows: true,
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+			if($(window).width() <= 991){
+				obj = {
+					infinite: false,
+					slidesToShow: 5,
+					variableWidth: true,
+					slidesToScroll: 4,
+					arrows: true,
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+			if($(window).width() <= 767){
+				obj = {
+					infinite: false,
+					slidesToShow: 4,
+					variableWidth: true,
+					slidesToScroll: 3,
+					arrows: true,
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+			if($(window).width() <= 575){
+				obj = {
+					infinite: false,
+					slidesToShow: 3,
+					variableWidth: true,
+					slidesToScroll: 2,
+					arrows: true,
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+			if($(window).width() <= 370){
+				obj = {
+					infinite: false,
+					slidesToShow: 2,
+					variableWidth: true,
+					slidesToScroll: 1,
+					arrows: true,
+					nextArrow: '<div class="slick-next arrow-next fas fa-chevron-right"></div>',
+					prevArrow: '<div class="slick-prev arrow-prev fas fa-chevron-left"></div>'
+				};
+				$('.tweets__header__carousel').slick('unslick');
+				$('.tweets__header__carousel').slick(obj);
+			}
+		}
+		$('.tweets__header__carousel').slick(obj);
+	</script>
+	<script>
+		(function($) {
+			$(function() {
+				$('.tweets__header__nav-item').click( function() {
+					$(this)
+							.attr("data-active","true").siblings().attr("data-active","false")
+							.children('.underline').attr("data-active","false");
+					$(this).siblings().children('.tweets_header__number').attr("data-active","false");
+					$(this).children('.underline').attr("data-active","true");
+					$(this).children('.tweets_header__number').attr("data-active","true");
+					$(document).find('.main-tab-content').attr("data-active","false");
+					$(`.${$(this).attr("data-tab_target_class")}`).attr("data-active","true");
+				});
+			});
+		})(jQuery);
+	</script>
+
+<!--	<script src="js/index.js"></script>-->
+</body>
+</html>

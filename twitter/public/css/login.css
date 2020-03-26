@@ -1,0 +1,105 @@
+html {
+    min-height: 100%;
+    position: relative;
+    overflow-y: hidden;
+}
+.login {
+    padding: 50px 0;
+    justify-content: center;
+    background-color: #e5edf0;
+    height: 100vh;   
+}
+.login-container {
+    display: grid;
+    margin:  0 15% auto 15%;
+    width: auto;
+    box-shadow: 0 0 5px 4px rgba(0,0,0,0.25);
+}
+.login-main {
+    padding: 20px 50% 20px 10%;
+    background-color: #ffffff;
+    display: block;
+}
+.login-footer {
+    padding: 20px 50% 20px 10%;
+    background-color:#f5f9fa;
+    display: flex;
+}
+.login-main__title {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.login-main__line {
+    display: block;
+    outline: none;
+    border-style: none;
+    border-bottom-style: inset;
+    height: 30px;
+    width: 100%;
+    border-color:#c0c0c0;
+    margin-bottom: 50px;
+}
+.login-main__btn {
+    color: #ffffff;
+    background-color: #41abe1;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 100vh;
+    transition:0.3s;
+    outline: none;
+}
+.login-main__btn:hover {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+.login-footer__question {
+    margin: 0 ;
+    padding-right: 3px;
+}
+.login-main__line:hover{
+    transition: all 0.3s ease;
+    border-color:#41abe1 ;
+}
+.login-main__line:focus{
+    border-color:#41abe1 
+}
+.login-footer__href, .login-footer__question {
+    text-decoration: none;
+    margin: 0;
+    font-size: 14px;
+}
+.login-footer__href {
+    color:#41abe1 ;
+}
+
+@media (max-width:764px){
+    .login-container{
+        width: 80%;
+        margin: 30px 10% 20px 10%;
+    }
+    .login-main__title{
+        font-size: 28px;
+    }
+    .login-main {
+        padding: 20px 20% 20px 10%;
+    }
+}
+@media (max-width:500px){
+    .login-main__line{
+        margin-bottom: 30px;
+    }
+    .login-main {
+        padding: 20px 10% 20px 10%;
+    }
+    .login-footer {
+        padding: 20px 10% 20px 10%;
+    }
+}
+@media (max-width:380px){
+    .login-container{
+        width: 90%;
+        margin: 50px 5% 20px 5%;
+    }
+}

@@ -1,0 +1,322 @@
+<nav class="navbar navbar-expand navbar-light navbar-custom">
+    <div class="tweets__header-container">
+        <div class="container">
+            <div class="row w-100 border-bottom tweets__header__first-row">
+
+                <div class="tweets__header__carousel">
+                    <div class="tweets__header__nav-item" data-active="true" data-tab_target_class="tweets__body-container">
+                        <div class="tweets_header__title">
+                            Tweet
+                        </div>
+                        <div class="tweets_header__number"  data-active="true">
+                            781
+                        </div>
+                        <div class="underline" data-active="true"></div>
+                    </div>
+                    <div class="tweets__header__nav-item" data-active="false">
+                        <div class="tweets_header__title">
+                            Photos/Videos
+                        </div>
+                        <div class="tweets_header__number" data-active="false">
+                            62
+                        </div>
+                        <div class="underline" data-active="false"></div>
+                    </div>
+                    <div class="tweets__header__nav-item" data-active="false" data-tab_target_class="following__body-container">
+                        <div class="tweets_header__title">
+                            Following
+                        </div>
+                        <div class="tweets_header__number" data-active="false">
+                            164
+                        </div>
+                        <div class="underline" data-active="false"></div>
+                    </div>
+                    <div class="tweets__header__nav-item" data-active="false" data-tab_target_class="following__body-container">
+                        <div class="tweets_header__title">
+                            Followers
+                        </div>
+                        <div class="tweets_header__number" data-active="false">
+                            277
+                        </div>
+                        <div class="underline" data-active="false"></div>
+                    </div>
+                    <div class="tweets__header__nav-item" data-active="false">
+                        <div class="tweets_header__title">
+                            Favorites
+                        </div>
+                        <div class="tweets_header__number"  data-active="false">
+                            24
+                        </div>
+                        <div class="underline" data-active="false"></div>
+                    </div>
+                    <div class="tweets__header__nav-item" data-active="false">
+                        <div class="tweets_header__title">
+                            View
+                        </div>
+                        <div class="tweets_header__number"  data-active="false">
+                            Lists
+                        </div>
+                        <div class="underline" data-active="false"></div>
+                    </div>
+                </div>
+
+                <div class="col-auto ml-auto following-area align-items-center justify-content-end">
+                    <button type="button" class="btn btn-primary btn-sm following-button">Following</button>
+                    <div class="settings" id="settingsDropdown" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                        <i class="fas fa-cog settings__gear-icon" style="color: #66757f"></i>
+                        <i class="fas fa-chevron-down settings__arrow-icon" style="color: #66757f"></i>
+                    </div>
+                    <div class="dropdown-menu settings-menu" aria-labelledby="settingsDropdown">
+                        <a class="dropdown-item" href="./edit.html">Edit</a>
+                        <a class="dropdown-item" href="./main.html">Log Out</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mr-auto border-bottom w-100 tweets__header__second-row align-items-center">
+                <div class="col-auto tweets__header__nav-item-second-row" data-active="true"> Tweets </div>
+                <div class="col-auto tweets__header__nav-item-second-row" data-active="false"> Tweets and replies </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="tweets__body-container main-tab-content" data-active="true">
+    <div class="container container-tweets-custom">
+        <div class="col-xl-9 col-md-9 col-sm-12">
+            <div class="row">
+                <div class="tweet rounded border">
+                    <div class="tweet__time">
+                        38m ago
+                    </div>
+                    <div class="tweet__text-huge">
+                        Twitter changes its layout, again. This one
+                        is a huge tweet.
+                        <a href="" class="wrapping-link">#NewTwitter</a>
+                    </div>
+                    <div class="tweet__toolbar align-items-center">
+                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            150
+                        </div>
+
+                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            35
+                        </div>
+
+                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            50
+                        </div>
+
+                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="tweet-media rounded border">
+                    <div class="tweet__time">
+                        1h ago
+                    </div>
+                    <div class="tweet__text-huge">
+                        This is a tweet with a nice <a href="">#picture</a> attached.
+                        Feel free to insert your favorite image here.
+                    </div>
+                    <div class="tweet__photo"></div>
+                    <div class="tweet__toolbar align-items-center">
+                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            319
+                        </div>
+
+                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            23
+                        </div>
+
+                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            89
+                        </div>
+
+                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                        <div class="more-options ml-auto toolbar-number">
+                            <a href=""> View more photos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="tweet rounded border">
+                    <div class="tweet__time"> 2d ago</div>
+                    <div class="tweet__text">
+                        And now comes a regular tweet! Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim. <a href="" class="wrapping-link"> #placeholdertexе </a>
+                    </div>
+                    <div class="tweet__toolbar align-items-center">
+                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            150
+                        </div>
+
+                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            35
+                        </div>
+
+                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            50
+                        </div>
+
+                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="retweet rounded border">
+                    <div class="tweet__retweet">
+                        <div class="retweet__time">
+                            <div class="retweet-icon rounded">
+                                <i class="fas fa-retweet toolbar-icon" style="color: #ffffff"></i>
+                            </div>
+                            <div class="retweet__text">
+                                retweeted on feb 13
+                            </div>
+                        </div>
+                        <div class="retweet__author">
+                            <div class="author-icon"></div>
+                            <div class="author-name">
+                                <a href="">Giulio Bordonaro</a> @GiulioBX · Feb 13
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tweet__text">
+                        I hope you find this #PSD <a href="">#template</a> useful. You can find the latest version
+                        on <a href="" class="wrapping-link">http://j.mp/twitter2014gui</a> (if you have any suggestion please contact me)
+                    </div>
+                    <div class="tweet__toolbar align-items-center">
+                        <i class="far fa-comment toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            150
+                        </div>
+
+                        <i class="fas fa-retweet toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            35
+                        </div>
+
+                        <i class="fas fa-star toolbar-icon" style="color: #ccd6dd"></i>
+                        <div class="toolbar-number">
+                            50
+                        </div>
+
+                        <i class="fas fa-ellipsis-h" style="color: #ccd6dd"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="following__body-container main-tab-content" data-active="false">
+    <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <div class="following__user-card border rounded">
+                        <div class="following__background">
+                            <div class="container">
+                                <div class="following__avatar-container">
+                                    <div class="following__avatar">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" class="following__followbtn" value="Follow">
+                        <div class="container following__user">
+                            <span class="following__fullname font-weight-bold">User Name</span>
+                            <span class="following__username">@username</span>
+                            <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="following__user-card border rounded">
+                        <div class="following__background">
+                            <div class="container">
+                                <div class="following__avatar-container">
+                                    <div class="following__avatar">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" class="following__followbtn" value="Follow">
+                        <div class="container following__user">
+                            <span class="following__fullname font-weight-bold">User Name</span>
+                            <span class="following__username">@username</span>
+                            <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="following__user-card border rounded">
+                        <div class="following__background">
+                            <div class="container">
+                                <div class="following__avatar-container">
+                                    <div class="following__avatar">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" class="following__followbtn" value="Follow">
+                        <div class="container following__user">
+                            <span class="following__fullname font-weight-bold">User Name</span>
+                            <span class="following__username">@username</span>
+                            <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="following__user-card border rounded">
+                        <div class="following__background">
+                            <div class="container">
+                                <div class="following__avatar-container">
+                                    <div class="following__avatar">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" class="following__followbtn" value="Follow">
+                        <div class="container following__user">
+                            <span class="following__fullname font-weight-bold">User Name</span>
+                            <span class="following__username">@username</span>
+                            <p class="following__biography">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+
+<footer class="tweets__footer">
+    <div class="line1px"></div>
+    <i class="fab fa-twitter footer-icon" style="color: #cccccc"></i>
+    <div class="line1px"></div>
+</footer>
+
+
+<!--<i class="fas fa-retweet"></i>-->
+<!--<i class="fas fa-star"></i>-->
+<!--<i class="far fa-comment"></i>-->
+<!--<i class="fas fa-cog"></i>-->
