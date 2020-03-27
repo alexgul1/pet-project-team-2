@@ -1,6 +1,9 @@
 body{
     font-family: sans-serif;
     margin: 0;
+    min-height: 100vh;
+    background-color:#e5edf0;
+
 }
 .twit-head{
     margin: 0;
@@ -13,8 +16,8 @@ body{
     box-shadow: 0 0 5px 4px rgba(0,0,0,0.25);
 }
 .sign-headline{
-    width: 40%;
-    margin: 7px 45% 7px 15%;
+    width: 60%;
+    margin: 7px 20% 7px 20%;
     display: flex;
     justify-content: space-between;
 }
@@ -43,11 +46,12 @@ body{
 }
 .registration-page{
     display: flex;
-    background-color:#e5edf0 ;
+    background-color:#e5edf0;
+    width: 100%;
 }
 .registr-container{
     display: grid;
-    margin:  50px 36% 20px 14%;
+    margin:  50px 25% 20px 25%;
     width: auto;
     box-shadow: 0 0 5px 4px rgba(0,0,0,0.25);
 }
@@ -154,7 +158,7 @@ body{
     }
     .sign-headline{
         width: 80%;
-        margin: 10px 10%;
+        margin: 10px 15%;
     }
     .fa-twitter{
         font-size: 22px;
@@ -173,7 +177,7 @@ body{
 @media (max-width:500px){
     .sign-headline{
         width: 80%;
-        margin: 10px auto;
+        margin: 10px 15%;
     }
     .registr__text{
         font-size: 10px;
@@ -196,5 +200,9 @@ body{
     .registr-container{
         width: 90%;
         margin: 50px 5% 20px 5%;
+    }
+    .sign-headline{
+        width: 80%;
+        margin: 10px 15%;
     }
 }
