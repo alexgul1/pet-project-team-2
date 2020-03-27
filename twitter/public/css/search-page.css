@@ -78,6 +78,11 @@
 .fix-some-pos{
     margin-top: -5px;
 }
+@media (min-width:768px){
+    .user__how-much{
+        justify-content: space-between;
+    }
+}
 @media (max-width:991px){
     .user__twt{
         font-size: 12px;
