@@ -39,7 +39,7 @@
         "gulp-sass": "4.0.2",
         "gulp-sourcemaps": "2.6.5",
         "gulp-uglify": "3.0.2",
-        "harp": "^0.31.0",
+        "harp": "^0.40.2",
         "jsdom": "^16.2.0",
         "localStorage": "^1.0.4",
         "mocha": "^7.1.0",
